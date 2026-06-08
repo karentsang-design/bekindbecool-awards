@@ -346,6 +346,9 @@
   .creator{width:96px;text-align:center;flex:0 0 auto}
   .avatar{width:74px;height:74px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.3rem;box-shadow:0 4px 14px rgba(16,40,60,.15);overflow:hidden}
   .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+  .creator .avatar.sm{font-size:.98rem;letter-spacing:.02em}
+  .creator.school{width:116px}
+  .creator.school .cn{white-space:normal;overflow:visible;line-height:1.18}
   .creator{transition:transform .15s}
   .creator:hover{transform:translateY(-3px)}
   .creator:hover .avatar{outline-color:var(--blue)}
@@ -656,6 +659,10 @@
     </div>
     <div class="center" style="margin-top:12px"><a class="seeall" href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener">See all 38 artworks on Gan Jing World →</a></div>
   </div>
+  <div class="wrap" style="margin-top:36px">
+    <div class="center"><h3 class="gal-sub">Participating schools</h3><p class="sub" style="margin:6px auto 0">Classrooms across New York, New Jersey, and beyond joined the Kindness Art Competition.</p></div>
+    <div class="marquee" style="margin-top:20px"><div class="mtrack" id="schooltrack"></div></div>
+  </div>
 </section>
 
 <!-- CEREMONY GALLERY -->
@@ -758,6 +765,8 @@
   function cbuild(el,arr){if(!el)return;var h="";for(var l=0;l<2;l++){arr.forEach(function(c,i){var av=c[3]?'<span class="avatar"><img loading="lazy" src="'+c[3]+'" alt=""></span>':'<span class="avatar" style="background:linear-gradient(135deg,'+cpal[i%cpal.length]+')">'+cinit(c[0]).toUpperCase()+'</span>';h+='<a class="creator" href="'+c[2]+'" target="_blank" rel="noopener">'+av+'<div class="cn">'+c[0]+'</div><div class="cf">'+c[1]+'</div></a>';});}el.innerHTML=h;}
   cbuild(document.getElementById("mtrack"),creators);
   cbuild(document.getElementById("mtrack2"),creators.slice().reverse());
+  var schools=[["McKinley Elementary","MK"],["Roosevelt School","RS"],["Skano Elementary","SK"],["Vera Art Studio","VA"],["Jotham W. Wakeman No. 6","JW"],["High School of the Arts","HA"],["DCES","DCES"],["Ann Street School","AS"],["SFMS","SFMS"],["Challenger School","CH"],["BHBL O'Rourke Middle School","BO"],["BHBL High School","BH"],["Lakewood Middle School","LM"],["Northern Academy of the Arts","NA"]];
+  (function(){var el=document.getElementById("schooltrack");if(!el)return;var hh="";for(var l=0;l<2;l++){schools.forEach(function(s,i){var cls=s[1].length>2?" sm":"";hh+='<div class="creator school"><span class="avatar'+cls+'" style="background:linear-gradient(135deg,'+cpal[i%cpal.length]+')">'+s[1]+'</span><div class="cn">'+s[0]+'</div></div>';});}el.innerHTML=hh;})();
 
   // Impact stats marquee
   var stats=[['34K+','Kindness videos'],['6,200+','Creator channels'],['11','Languages'],['50+','Countries'],['1B+','Impressions'],['169M+','Creator reach'],['150+','Viewing nations'],['3 yrs','On Times Square']];
