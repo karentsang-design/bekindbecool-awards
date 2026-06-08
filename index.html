@@ -50,11 +50,14 @@
   .hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
   .hero-visual{width:100%;max-width:1080px}
   .hero-visual img{width:100%;display:block}
-  .hero .lead{margin:26px auto 20px;max-width:52ch;color:var(--slate);font-size:1.28rem;line-height:1.5}
+  .hero .lead{margin:30px auto 4px;max-width:60ch;color:var(--slate);font-size:1.34rem;line-height:1.5}
   .hero .hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
-  .hero-hooks{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;margin:20px auto 22px;max-width:780px;padding:0}
-  .hero-hooks li{font-size:.95rem;font-weight:700;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px}
-  .hero-hooks li b{color:var(--blue);font-weight:800}
+  .hero-hooks{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;margin:26px auto 20px;max-width:940px;padding:0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-hooks li{flex:1 1 200px;padding:20px 22px;text-align:center;border-right:1px solid var(--line)}
+  .hero-hooks li:last-child{border-right:none}
+  .hero-hooks li b{display:block;font-size:1.5rem;color:var(--blue);font-weight:800;letter-spacing:-.01em;line-height:1.1}
+  .hero-hooks li span{display:block;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--slate);margin-top:6px}
+  @media(max-width:620px){.hero-hooks{max-width:440px}.hero-hooks li{flex:1 1 45%;padding:15px 10px;border-bottom:1px solid var(--line)}.hero-hooks li b{font-size:1.18rem}}
   .hero-how{display:inline-block;margin-top:18px;font-size:.96rem;font-weight:700;color:var(--blue)}
   .hero-how:hover{text-decoration:underline}
   .statline{margin:42px 0 0;width:100%}
@@ -85,7 +88,15 @@
   .fdot{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.88rem;flex:0 0 auto}
   .fstep span{font-weight:600;font-size:clamp(.82rem,2.1vw,1.02rem);white-space:nowrap}
   .fline{flex:1 1 24px;min-width:16px;max-width:64px;border-top:2px dotted #c3bdb1}
-  .enter-card{max-width:680px;margin:0 auto;text-align:center}
+  .enter-card{max-width:940px;margin:0 auto;text-align:center}
+  .hiw{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:8px;background:#eef4ff;border:1px solid #dbe7fc;border-radius:18px;padding:28px 20px}
+  .hiw-step{flex:1 1 180px;max-width:230px;text-align:center;padding:6px 10px}
+  .hiw-ic{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;box-shadow:0 6px 16px rgba(20,40,80,.18)}
+  .hiw-ic svg{width:26px;height:26px}
+  .hiw-step h4{font-size:1.04rem;font-weight:800;margin-bottom:5px;color:var(--ink)}
+  .hiw-step p{font-size:.86rem;color:var(--slate);line-height:1.45}
+  .hiw-arrow{align-self:center;margin-top:20px;color:#9db8e6;font-size:1.5rem;font-weight:700;flex:0 0 auto}
+  @media(max-width:760px){.hiw{padding:22px 14px}.hiw-arrow{display:none}.hiw-step{flex:1 1 42%;max-width:none}}
   @media(max-width:600px){
     .enter-card .flow{flex-direction:column;align-items:center;gap:16px;margin-top:8px}
     .enter-card .fline{display:none}
@@ -179,9 +190,9 @@
   .roll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}
   .roll::-webkit-scrollbar{height:8px}
   .roll::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
-  .vcard{flex:0 0 270px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .16s,box-shadow .16s}
+  .vcard{flex:0 0 min(460px,82vw);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .16s,box-shadow .16s}
   .vcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-  .vcard.lg{flex-basis:270px}
+  .vcard.lg{flex-basis:min(460px,82vw)}
   .thumb{position:relative;aspect-ratio:16/9;background:#0c1622;overflow:hidden}
   .thumb img{width:100%;height:100%;object-fit:cover}
   .thumb.gen{display:grid;place-items:center;text-align:center;padding:14px;color:#fff;font-weight:700;font-size:.95rem}
@@ -192,8 +203,8 @@
   .b-special{background:rgba(90,120,220,.95);color:#fff}
   .play{position:absolute;right:9px;bottom:9px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.55);display:grid;place-items:center;color:#fff;font-size:.7rem}
   .play::after,.splay::after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid #fff;margin-left:2px}
-  .vbody{padding:11px 13px}
-  .vbody h3{font-size:.92rem;line-height:1.25;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.3em}
+  .vbody{padding:14px 16px}
+  .vbody h3{font-size:1.06rem;line-height:1.28;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.3em}
   .vbody .who{font-size:.78rem;color:var(--teal);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
   /* MEET THE GOLD WINNERS */
@@ -407,13 +418,13 @@
     <div class="hero-visual">
       <img src="hero_kindness.png" alt="Choose Kindness — #BeKindBeCool Kindness Awards 2026–27, with real winners and student artwork inside the letters">
     </div>
-    <p class="lead">Choose kindness every day — in big or small ways — and share it with <strong>#BeKindBeCool</strong>. Every act you pass on inspires the next, and together we'll amplify it into a global movement.</p>
-    <ul class="hero-hooks"><li><b>$10,000</b> in prizes</li><li>Times Square showcase</li><li>Open to creators &amp; students</li><li>Submissions open <b>June 15, 2026</b></li></ul>
+    <ul class="hero-hooks"><li><b>$10,000</b><span>in total prizes</span></li><li><b>Times Square</b><span>billboard showcase</span></li><li><b>Creators &amp; students</b><span>everyone can enter</span></li><li><b>June 15, 2026</b><span>submissions open</span></li></ul>
       <div class="hero-cta">
         <a class="btn btn-primary" href="https://www.ganjingworld.com/hashtag/BeKindBeCool?tab=all&l=Kindness+Awards" target="_blank" rel="noopener">Submit Your Work →</a>
       </div>
       <a class="hero-how" href="#how">How it works ↓</a>
     <div class="marquee statline"><div class="mtrack" id="strack"></div></div>
+    <p class="lead">Choose kindness every day — in big or small ways — and share it with <strong>#BeKindBeCool</strong>. Every act you pass on inspires the next, and together we'll amplify it into a global movement.</p>
   </div>
 </section>
 
@@ -435,10 +446,14 @@
 </div>
 <div class="wrap" style="margin-top:32px">
   <div class="enter-card">
-  <div class="flow">
-    <div class="fstep"><div class="fdot">1</div><span>Do something kind</span></div>
-    <div class="fstep"><div class="fdot">2</div><span>Create your content</span></div>
-    <div class="fstep"><div class="fdot">3</div><span>Post with #BeKindBeCool</span></div>
+  <div class="hiw">
+    <div class="hiw-step"><div class="hiw-ic" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h4>1. Create</h4><p>Do something kind, then capture it as a video, short, or artwork.</p></div>
+    <div class="hiw-arrow">→</div>
+    <div class="hiw-step"><div class="hiw-ic" style="background:#f59e0b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"/><path d="M7 9l5-5 5 5"/><path d="M5 20h14"/></svg></div><h4>2. Submit</h4><p>Post it on Gan Jing World with #BeKindBeCool.</p></div>
+    <div class="hiw-arrow">→</div>
+    <div class="hiw-step"><div class="hiw-ic" style="background:#1f8a5b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c.5-3 3-4.5 5.5-4.5S14 17 14.5 20"/><path d="M16 5.5a3 3 0 0 1 0 5.5"/><path d="M18 20c-.3-2.2-1.3-3.6-3-4.2"/></svg></div><h4>3. Inspire</h4><p>Winning entries are showcased on the Times Square billboard.</p></div>
+    <div class="hiw-arrow">→</div>
+    <div class="hiw-step"><div class="hiw-ic" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.5 4.5"/><path d="M16 6h2.5a2.5 2.5 0 0 1-2.5 4.5"/><path d="M12 12v3"/><path d="M9.5 20h5l-.7-3h-3.6l-.7 3z"/></svg></div><h4>4. Win</h4><p>Share $10,000 in prizes and earn a kindness certificate.</p></div>
   </div>
   <a class="btn btn-primary" style="margin-top:22px" href="https://www.ganjingworld.com/hashtag/BeKindBeCool?tab=all&l=Kindness+Awards" target="_blank" rel="noopener">Submit your work →</a>
   </div>
