@@ -48,11 +48,11 @@
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
   .hero{background:#fff;padding:18px 0 36px}
   .hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
-  .hero-visual{width:100%;max-width:1080px}
-  .hero-visual img{width:100%;display:block}
+  .hero-visual{width:100%;max-width:1080px;overflow:hidden}
+  .hero-visual img{width:100%;display:block;margin-bottom:-6%}
   .hero .lead{margin:54px auto 10px;max-width:52ch;color:var(--slate);font-size:clamp(1.36rem,2.3vw,1.74rem);line-height:1.5;font-weight:500}
   .hero .hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
-  .hero-hooks{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;margin:12px auto 26px;max-width:1080px;padding:0;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-hooks{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;margin:4px auto 26px;max-width:1080px;padding:0;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
   .hero-hooks li{flex:1 1 200px;padding:26px 22px;text-align:center;border-right:1px solid var(--line)}
   .hero-hooks li:last-child{border-right:none}
   .hero-hooks li b{display:block;font-size:clamp(1.8rem,2.6vw,2.3rem);color:var(--blue);font-weight:800;letter-spacing:-.02em;line-height:1.05}
@@ -88,14 +88,14 @@
   .fdot{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.88rem;flex:0 0 auto}
   .fstep span{font-weight:600;font-size:clamp(.82rem,2.1vw,1.02rem);white-space:nowrap}
   .fline{flex:1 1 24px;min-width:16px;max-width:64px;border-top:2px dotted #c3bdb1}
-  .enter-card{max-width:940px;margin:0 auto;text-align:center}
-  .hiw{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:8px;background:#eef4ff;border:1px solid #dbe7fc;border-radius:18px;padding:28px 20px}
-  .hiw-step{flex:1 1 180px;max-width:230px;text-align:center;padding:6px 10px}
-  .hiw-ic{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;box-shadow:0 6px 16px rgba(20,40,80,.18)}
-  .hiw-ic svg{width:26px;height:26px}
-  .hiw-step h4{font-size:1.04rem;font-weight:800;margin-bottom:5px;color:var(--ink)}
-  .hiw-step p{font-size:.86rem;color:var(--slate);line-height:1.45}
-  .hiw-arrow{align-self:center;margin-top:20px;color:#9db8e6;font-size:1.5rem;font-weight:700;flex:0 0 auto}
+  .enter-card{max-width:none;margin:0 auto;text-align:center}
+  .hiw{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:8px;background:#eef4ff;border:1px solid #dbe7fc;border-radius:20px;padding:44px 34px}
+  .hiw-step{flex:1 1 200px;max-width:290px;text-align:center;padding:10px 18px}
+  .hiw-ic{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;box-shadow:0 6px 16px rgba(20,40,80,.18)}
+  .hiw-ic svg{width:33px;height:33px}
+  .hiw-step h4{font-size:1.3rem;font-weight:800;margin-bottom:8px;color:var(--ink)}
+  .hiw-step p{font-size:1.04rem;color:var(--slate);line-height:1.5}
+  .hiw-arrow{align-self:center;margin-top:26px;color:#9db8e6;font-size:1.9rem;font-weight:700;flex:0 0 auto}
   @media(max-width:760px){.hiw{padding:22px 14px}.hiw-arrow{display:none}.hiw-step{flex:1 1 42%;max-width:none}}
   @media(max-width:600px){
     .enter-card .flow{flex-direction:column;align-items:center;gap:16px;margin-top:8px}
@@ -129,7 +129,7 @@
   .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
   @media(max-width:820px){.bgrid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.bgrid{grid-template-columns:1fr}}
-  .bcard{position:relative;display:block;aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid var(--line);color:#fff}
+  .bcard{position:relative;display:block;aspect-ratio:4/3;border-radius:16px;overflow:hidden;color:#fff}
   .bphoto{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease}
   .bcard:hover .bphoto{transform:scale(1.06)}
   .bcard.cert .bphoto{background-size:contain;background-repeat:no-repeat;background-color:#eef1f5}
@@ -176,7 +176,7 @@
 
   /* CTA BAND */
   .cta-band{background:transparent;color:var(--ink);text-align:center}
-  .cta-band h2{font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:-.03em;font-weight:800;max-width:18ch;margin:0 auto 10px}
+  .cta-band h2{font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:-.03em;font-weight:800;max-width:none;margin:0 auto 10px}
   .cta-band p{font-size:1rem;max-width:46ch;margin:0 auto 18px;color:rgba(255,255,255,.92)}
   .ts-note{font-size:.8rem;color:rgba(255,255,255,.7);margin-top:14px}
 
@@ -431,16 +431,6 @@
   </div>
 </section>
 
-<!-- COMMUNITY SHOWCASE -->
-<section id="community"><div class="wrap">
-  <div class="sec-head">
-    <div><h2 class="st">From the community</h2><p class="sub">A living wall of kindness — 1,500+ stories already shared with #BeKindBeCool.</p></div>
-    <div class="rollnav"><button class="rnav" id="comPrev" type="button" aria-label="Scroll left">‹</button><button class="rnav" id="comNext" type="button" aria-label="Scroll right">›</button></div>
-  </div>
-  <div class="comroll" id="comroll"></div>
-  <div class="center" style="margin-top:8px"><a class="btn btn-primary" href="https://www.ganjingworld.com/hashtag/BeKindBeCool?tab=all&l=Kindness+Awards" target="_blank" rel="noopener">Browse all entries →</a></div>
-</div></section>
-
 <!-- HOW TO ENTER -->
 <section id="how"><div class="wrap center">
   <h2 class="st">Choose kindness, with actions</h2>
@@ -460,6 +450,15 @@
   </div>
   <a class="btn btn-primary" style="margin-top:22px" href="https://www.ganjingworld.com/hashtag/BeKindBeCool?tab=all&l=Kindness+Awards" target="_blank" rel="noopener">Submit your work →</a>
   </div>
+</div>
+
+<div class="wrap" style="margin-top:54px">
+  <div class="sec-head">
+    <div><h2 class="st">From the community</h2><p class="sub">A living wall of kindness — 1,500+ stories already shared with #BeKindBeCool.</p></div>
+    <div class="rollnav"><button class="rnav" id="comPrev" type="button" aria-label="Scroll left">‹</button><button class="rnav" id="comNext" type="button" aria-label="Scroll right">›</button></div>
+  </div>
+  <div class="comroll" id="comroll"></div>
+  <div class="center" style="margin-top:8px"><a class="btn btn-primary" href="https://www.ganjingworld.com/hashtag/BeKindBeCool?tab=all&l=Kindness+Awards" target="_blank" rel="noopener">Browse all entries →</a></div>
 </div>
 
 <div class="wrap center" style="margin-top:44px"><h3 class="flip-h">Need inspiration? Tap a card.</h3></div>
