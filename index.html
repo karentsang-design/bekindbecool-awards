@@ -22,8 +22,8 @@
   h2.st{font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:12px}
   .sub{color:var(--slate);font-size:1.12rem;max-width:60ch;line-height:1.55}
   .center{text-align:center}.center .sub{margin:0 auto}
-  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem;padding:12px 24px;border-radius:999px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .2s,color .15s}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:1.02rem;padding:14px 28px;border-radius:999px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .2s,color .15s}
   .btn-primary{background:linear-gradient(45deg,#0187FD,#00B0FC);color:#fff;box-shadow:0 10px 22px rgba(1,135,253,.32)}
   .btn-primary:hover{background:linear-gradient(45deg,#F7941E,#FFD601);color:#15171c;transform:translateY(-1px)}
   .btn-dark{background:var(--coral);color:#fff}.btn-dark:hover{transform:translateY(-1px)}
@@ -67,7 +67,7 @@
   .wthumb img{width:100%;height:100%;object-fit:cover}
 
   /* FLOW — one-line steps */
-  .flow{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:6px;margin-top:10px;overflow-x:auto}
+  .flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 6px;margin-top:16px}
   .fstep{display:flex;align-items:center;gap:10px;flex:0 0 auto}
   .fdot{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.88rem;flex:0 0 auto}
   .fstep span{font-weight:600;font-size:clamp(.82rem,2.1vw,1.02rem);white-space:nowrap}
@@ -80,7 +80,11 @@
   .flip-h{font-size:1.35rem;font-weight:800;letter-spacing:-.01em;margin-top:4px}
   @keyframes dealin{from{opacity:0;transform:translateY(16px) scale(.95)}to{opacity:1;transform:none}}
   .flipgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}
-  @media(max-width:760px){.flipgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:760px){
+    .flipgrid{display:flex;grid-template-columns:none;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;padding:4px 4px 12px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}
+    .flipgrid::-webkit-scrollbar{height:7px}.flipgrid::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+    .flipgrid .flipcard{flex:0 0 150px;scroll-snap-align:start}
+  }
   .flipcard{aspect-ratio:198/270;perspective:1000px;cursor:pointer;animation:dealin .5s ease both}
   .flipinner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
   .flipcard.flipped .flipinner{transform:rotateY(180deg)}
@@ -208,7 +212,7 @@
   .catcol{display:flex;flex-direction:column}
   .toolkit-mini{margin-top:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .tk-note{font-size:.76rem;color:var(--slate);max-width:38ch}
-  .btn-sm{padding:9px 16px;font-size:.85rem}
+  .btn-sm{padding:10px 18px;font-size:.92rem}
   .hero-credit{font-size:.72rem;color:var(--slate);opacity:.85;margin-top:8px}
   .toolkit strong{color:#1f5fd6}
   .toolkit .btn{flex:0 0 auto}
@@ -248,6 +252,14 @@
   .car-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
   .car-dot{width:9px;height:9px;border-radius:50%;background:#c8d4e2;border:none;cursor:pointer;padding:0;transition:.2s}
   .car-dot.active{background:var(--blue);width:24px;border-radius:6px}
+  .artroll{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 14px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent;margin-top:16px}
+  .artroll::-webkit-scrollbar{height:8px}.artroll::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+  .rollwrap{position:relative}
+  .agcard{flex:0 0 158px;scroll-snap-align:start}
+  .agcard .frame{aspect-ratio:1/1;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#eef2f5}
+  .agcard .frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .agcard .cap{font-size:.72rem;color:var(--slate);margin-top:6px;line-height:1.3}
+  .agcard .cap b{color:var(--ink);font-weight:700}
   @media(max-width:520px){.car-prev{left:4px}.car-next{right:4px}}
 
   /* ENDORSEMENTS */
@@ -272,7 +284,7 @@
   .nroll .ncard{flex:0 0 300px;scroll-snap-align:start}
   .comroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 16px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}
   .comroll::-webkit-scrollbar{height:8px}.comroll::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
-  .comcard{flex:0 0 240px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);display:block;position:relative;scroll-snap-align:start;transition:transform .16s}
+  .comcard{flex:0 0 280px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);display:block;position:relative;scroll-snap-align:start;transition:transform .16s}
   .comcard:hover{transform:translateY(-3px)}
   .comcard img{width:100%;height:100%;object-fit:cover}
 
@@ -282,7 +294,7 @@
   .marquee:hover .mtrack{animation-play-state:paused}
   @keyframes scrollx{to{transform:translateX(-50%)}}
   .creator{width:96px;text-align:center;flex:0 0 auto}
-  .avatar{width:72px;height:72px;border-radius:50%;margin:0 auto 7px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.3rem;box-shadow:0 6px 16px rgba(16,40,60,.18);border:3px solid #fff;outline:2px solid var(--line);overflow:hidden}
+  .avatar{width:74px;height:74px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.3rem;box-shadow:0 4px 14px rgba(16,40,60,.15);overflow:hidden}
   .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
   .creator{transition:transform .15s}
   .creator:hover{transform:translateY(-3px)}
@@ -488,13 +500,19 @@
   <div class="yearpanel" id="y24">
     <p class="sub" style="margin-bottom:10px">Second edition · "Share Kindness" — 26,000+ entries, 4,352 creators. Celebrated at Times Square, Mar 28, 2025.</p>
     <div class="roll">
-      <a class="vcard lg" href="https://www.ganjingworld.com/article/1hgdchhplqp1D66uJwtM3wUqE1ho1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#b8860b,#f4b740)"><span>Hero in Uniform — Hurricane Helene Relief</span></div><div class="vbody"><h3>Hero in Uniform · "Born to Rise"</h3><div class="who">James H. White · $10,000</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1hgdchhplqp1D66uJwtM3wUqE1ho1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#5b6675,#9aa6b6)"><span>"Old Shoes" — short film</span></div><div class="vbody"><h3>Old Shoes</h3><div class="who">Audrey Wang · $1,000</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1hgdchhplqp1D66uJwtM3wUqE1ho1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#0e7c86,#1aa0ab)"><span>Free haircuts for those in need</span></div><div class="vbody"><h3>HAIR ASMR CEYHUN</h3><div class="who">Bronze · 1M+</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1hgdchhplqp1D66uJwtM3wUqE1ho1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#7a5cff,#a98bff)"><span>SMPN 29 Batam — 1,000 students</span></div><div class="vbody"><h3>SMPN 29 Batam · Indonesia</h3><div class="who">Bronze · School</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1hgdchhplqp1D66uJwtM3wUqE1ho1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#ff6b5b,#ff9764)"><span>Prom Dresses &amp; Suits Giveaway</span></div><div class="vbody"><h3>Marco in America</h3><div class="who">Bronze</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1hgdchhplqp1D66uJwtM3wUqE1ho1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#0a5a62,#0e7c86)"><span>+ Lumen Academy · Burnt Hills HS · Clearview Kidsland · NDP · Truth Video Maker · Quinn (age 10)</span></div><div class="vbody"><h3>More Bronze winners</h3><div class="who">$500 each · 10 total</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1hgdchhplqp1D66uJwtM3wUqE1ho1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#3a5fb0,#6f8fd6)"><span>HCMC University students · 55 films</span></div><div class="vbody"><h3>Student Voices School Awards</h3><div class="who">Vietnam · $500</div></div></a>
+      <a class="vcard lg" href="https://www.ganjingworld.com/video/1hajmil1vvj28Njc6mpjNbtmy1gm1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/12/c1/53/12c15376-a16a-40eb-8512-5ed0cb7a8d81/672.jpg" alt=""><span class="badge b-gold">Gold · $10,000</span><span class="play"></span></div><div class="vbody"><h3>Hero in Uniform — Hurricane Helene Relief</h3><div class="who">James H. White · "Born to Rise"</div></div></a>
+      <a class="vcard lg" href="https://www.ganjingworld.com/video/1h9pr68ag2q4nBAKwcbWWK55N1kg1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image5-us-west.cloudokyo.cloud/image/v1/96/36/22/96362296-fb2a-434b-80f3-60333d0159ab/672.jpg" alt=""><span class="badge b-silver">Silver · $1,000</span><span class="play"></span></div><div class="vbody"><h3>Old Shoes — short film</h3><div class="who">Audrey</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1h9lq89qa574s51F86NNjeBeq16s1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/6c/b1/ac/6cb1acb4-5bf7-47b8-8111-15103f09e7af/672.jpg" alt=""><span class="badge b-bronze">Bronze</span><span class="play"></span></div><div class="vbody"><h3>Second Chance — Homeless Awareness</h3><div class="who">HAIR ASMR CEYHUN · 1M+</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1ha0e6cesei7q6msgHhndGkt618h1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image5-us-west.cloudokyo.cloud/image/v1/87/6b/34/876b344d-96ff-451d-9a41-87b56af74705/672.jpg" alt=""><span class="badge b-bronze">Bronze</span><span class="play"></span></div><div class="vbody"><h3>Be With You</h3><div class="who">Cast By Light</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gmpightf3r2MMf5q0LslopnR1351c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image4-us-west.cloudokyo.cloud/image/v1/4a/48/c9/4a48c9dd-d289-420c-814d-db08009047e0/672.jpg" alt=""><span class="badge b-bronze">Bronze</span><span class="play"></span></div><div class="vbody"><h3>Prom Dresses &amp; Suits Giveaway</h3><div class="who">Marco in America</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gu7u2h8put2LbPyH5vKmBjnf10o1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/71/2c/cd/712ccdb5-77a5-47e4-9e46-c103a730971c/672.jpg" alt=""><span class="badge b-bronze">Bronze</span><span class="play"></span></div><div class="vbody"><h3>Kindness Is Cool — original song</h3><div class="who">Quinn Fernanda, age 10</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1h99kuk0fid19q8JCJykIIEGe1391c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/02/e8/cb/02e8cb57-ffcd-4396-9713-30673f9c5346/672.jpg" alt=""><span class="badge b-bronze">Bronze</span><span class="play"></span></div><div class="vbody"><h3>SMPN 29 Batam — 1,000 students</h3><div class="who">Indonesia · School</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1h28312ld8p3Zf8yIOgS9WhL81h71c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/ea/6a/c2/ea6ac230-77c1-4174-bcad-40dd61be1ab2/672.jpg" alt=""><span class="badge b-bronze">Bronze</span><span class="play"></span></div><div class="vbody"><h3>Food Bank Volunteering</h3><div class="who">Clearview Kidsland</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gt2pmapfkl3Kh3DS14BGZE731vr1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image3-us-west.cloudokyo.cloud/image/v1/ef/38/91/ef389150-55d6-458c-bafd-7fb3e8a3a62a/672.jpg" alt=""><span class="badge b-bronze">Bronze</span><span class="play"></span></div><div class="vbody"><h3>A 20-Year Invoice</h3><div class="who">NDP</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1h2og7qnajl3Tmg5VDRHbrrNA1ds1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image5-us-west.cloudokyo.cloud/image/v1/96/28/a3/9628a352-326d-486a-9b3e-32f2065bc911/672.jpg" alt=""><span class="badge b-bronze">Bronze</span><span class="play"></span></div><div class="vbody"><h3>My Wish</h3><div class="who">Truth Video Maker · Japan</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1ha39lsk8ll2qvwaRhij6pX9B1s21c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image3-us-west.cloudokyo.cloud/image/v1/bf/76/c1/bf76c17b-3a81-4587-836c-fd572dc26981/672.jpg" alt=""><span class="badge b-special">School · $500</span><span class="play"></span></div><div class="vbody"><h3>Student Voices — literary short films</h3><div class="who">HCMC Univ. of Education · Vietnam</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1h4kmohat933ez7FnDioLhz3Z1vv1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image3-us-west.cloudokyo.cloud/image/v1/fe/2c/92/fe2c9279-e49b-4110-88f4-b9e12a911119/672.jpg" alt=""><span class="badge b-special">Honorable</span><span class="play"></span></div><div class="vbody"><h3>Our World — breakfast for grandma</h3><div class="who">Honorable Mention</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1h7nuobg95f2iCJ2LdwFCRQfl1it1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/42/55/56/425556ef-01af-4b71-b1fe-e979e94761cc/672.jpg" alt=""><span class="badge b-special">Honorable</span><span class="play"></span></div><div class="vbody"><h3>Fable — The Golden Eggs</h3><div class="who">Honorable Mention · animation</div></div></a>
     </div>
   </div>
 
@@ -502,11 +520,23 @@
   <div class="yearpanel" id="y23">
     <p class="sub" style="margin-bottom:10px">Inaugural edition — 10,000+ entries across six continents. First Times Square celebration, Mar 8, 2024.</p>
     <div class="roll">
-      <a class="vcard lg" href="https://www.ganjingworld.com/article/1ggbqf8moug478UdayOG8Vk7e12e1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#b8860b,#f4b740)"><span>"Breaking Barriers" — David Vobora</span></div><div class="vbody"><h3>Breaking Barriers</h3><div class="who">Sam Coggin (14) · $10,000</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1ggbqf8moug478UdayOG8Vk7e12e1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#5b6675,#9aa6b6)"><span>New Century Films · 30+ shorts</span></div><div class="vbody"><h3>Kindness Together</h3><div class="who">Group Award · $5,000</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1ggbqf8moug478UdayOG8Vk7e12e1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#0e7c86,#1aa0ab)"><span>"Kindness Is Cool" — original song, age 9</span></div><div class="vbody"><h3>Big Lotus 415</h3><div class="who">Appreciation · $1,000</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1ggbqf8moug478UdayOG8Vk7e12e1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#7a5cff,#a98bff)"><span>Grandfather's Story · ink-wash animation</span></div><div class="vbody"><h3>+ The Bill · My Teacher · Vietnam</h3><div class="who">Appreciation · $1,000 ×5</div></div></a>
-      <a class="vcard" href="https://www.ganjingworld.com/article/1ggbqf8moug478UdayOG8Vk7e12e1c" target="_blank" rel="noopener"><div class="thumb gen" style="background:linear-gradient(135deg,#ff6b5b,#ff9764)"><span>Star Academy · IMT Liège · Chandra Kumala · SASTRANI · Little Lotus</span></div><div class="vbody"><h3>Kindness Smiles Awards</h3><div class="who">$500 each · 10 winners</div></div></a>
+      <a class="vcard lg" href="https://www.ganjingworld.com/video/1gcmmpuep2d6mCyQgv7LBvKIL1rl1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image4-us-west.cloudokyo.cloud/image/v1/90/27/1c/90271ca2-ae10-45f0-9852-ea5a3a3fc51c/672.jpg" alt=""><span class="badge b-gold">Creativity · $10,000</span><span class="play"></span></div><div class="vbody"><h3>Breaking Barriers — David Vobora</h3><div class="who">Adaptive Training Foundation</div></div></a>
+      <a class="vcard lg" href="https://www.ganjingworld.com/channel/1eiqjdnq7gozJ9BKZeWTfN1061tn0c/playlist/1gb531iedep6p0P8TJXBhd41te0p" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image3-us-west.cloudokyo.cloud/image/v1/ed/1e/f2/ed1ef29c-cb8a-4380-a5bd-b6b07829deb2/672.jpg" alt=""><span class="badge b-silver">Group · $5,000</span><span class="play"></span></div><div class="vbody"><h3>Kindness Together — 30+ short films</h3><div class="who">New Century Films</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gco4gn1krr5MQQCEvgEXEGfo1ss1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image5-us-west.cloudokyo.cloud/image/v1/c1/78/16/c17816cc-0d7c-484e-9614-06932a3c8adf/672.jpg" alt=""><span class="badge b-special">$1,000</span><span class="play"></span></div><div class="vbody"><h3>The Bill</h3><div class="who">Appreciation Award</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gdgldps43i5F2CMs5wXSF8EG10d1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image3-us-west.cloudokyo.cloud/image/v1/45/4d/c9/454dc9ff-6834-4d47-a3e9-5dfb567c8ecb/672.jpg" alt=""><span class="badge b-special">$1,000</span><span class="play"></span></div><div class="vbody"><h3>My Teacher</h3><div class="who">Clearview School of Art</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gcgcp6kplk3cnWVZxXFa4QHv19t1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image5-us-west.cloudokyo.cloud/image/v1/b4/9c/ee/b49cee7b-7672-44e7-bb64-d5166de0a913/672.jpg" alt=""><span class="badge b-special">$1,000</span><span class="play"></span></div><div class="vbody"><h3>Life Is a Journey of Kindness</h3><div class="who">Hà Giang, Vietnam</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gdrc2nmvliTzr5CP2mdUok2q1411c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image2-us-west.cloudokyo.cloud/image/v1/dc/9d/ad/dc9dad14-c933-454e-bcc3-1d3e49bea12b/1280.jpg" alt=""><span class="badge b-special">$1,000</span><span class="play"></span></div><div class="vbody"><h3>Grandfather's Story — ink-wash animation</h3><div class="who">Appreciation Award</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1ga1ou462vg19Zu4jgv9B9w7y1i41c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/5c/90/f4/5c90f44e-a1ed-4709-9e61-e14299b5af56/origin.jpg" alt=""><span class="badge b-special">$1,000</span><span class="play"></span></div><div class="vbody"><h3>Kindness Is Cool — original song</h3><div class="who">Big Lotus 415, age 9</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gdqm3vpd0qMRinIWRteT5DiC1je1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image5-us-west.cloudokyo.cloud/image/v1/48/3c/9c/483c9c8d-9616-4acc-a407-9374dc783b9f/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Kindness Essays</h3><div class="who">Star Academy</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gbebfe87gg7Cml4Izq5MQ3eM1871c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/14/4b/85/144b85ff-9f0e-4d5c-9397-55d85a279181/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Kindness Is Cool at IMT Liège</h3><div class="who">Belgium · School</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gdopmeuc4j75w6Smsgx9bEGE1bh1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image3-us-west.cloudokyo.cloud/image/v1/33/32/51/33325110-29af-4144-a046-94ade38110cf/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Sharing Joy with Orphaned Children</h3><div class="who">Chandra Kumala School · Indonesia</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gdac7pgark2ioLyWt45iI20f1lh1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image5-us-west.cloudokyo.cloud/image/v1/dd/b8/c7/ddb8c720-84b2-4e3c-9a91-affb7f1f7058/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Art — sharing crayons</h3><div class="who">Kindness Smiles Award</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gb11p9bkas4AOVZB8SGBDDqr1kp1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/f4/35/15/f4351515-4204-4e4a-9e04-581615d1228c/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Kindness Is Cool · SASTRANI</h3><div class="who">Indonesia</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gc1ua371md1pDDNfe58FadOz1j41c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image4-us-west.cloudokyo.cloud/image/v1/63/fb/2a/63fb2a80-4625-41f0-8fa9-e92788042667/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>What the Older Brother Said</h3><div class="who">A candid family moment</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gb0hl6ot5e7ufF8CuV7iWCCd10c1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/f4/13/25/f4132563-fe08-43d4-84f1-97213a227afd/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Kindness Is Cool at Little Lotus Academy</h3><div class="who">New York · School</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gdc6p9685m7C3Rrsz6QM4duU1uq1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image2-us-west.cloudokyo.cloud/image/v1/55/b4/6d/55b46d3a-e482-47d1-8d60-606dc0b24c00/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Kindness At Birth</h3><div class="who">Kindness Smiles Award</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1gcgbe3trcg2yuriHJyfxpTFe1ml1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image4-us-west.cloudokyo.cloud/image/v1/8f/f4/4b/8ff44b19-0061-49b3-9656-38eddf3a6583/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Silent Train</h3><div class="who">Kindness to a stranger</div></div></a>
+      <a class="vcard" href="https://www.ganjingworld.com/video/1ga2oftc1jn51DPR83FO4Jk9m1qi1c" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/98/28/6a/98286aa1-125b-4100-ac8d-6962639f2f64/672.jpg" alt=""><span class="badge b-bronze">$500</span><span class="play"></span></div><div class="vbody"><h3>Innocent Beauty</h3><div class="who">Smiling children</div></div></a>
     </div>
   </div>
 
@@ -526,7 +556,7 @@
 <section class="artwork" id="artwork">
   <div class="wrap center">
     <h2 class="st">Winning artwork</h2>
-    <p class="sub">School Edition Art Competition — 2025–26 First Prize pieces illustrating "acts of kindness, big or small."</p>
+    <p class="sub">School Edition Art Competition — 2025–26 winners illustrating "acts of kindness, big or small."</p>
   </div>
   <div class="wrap">
     <div class="car">
@@ -557,6 +587,15 @@
       <button class="car-dot" aria-label="Artwork 3"></button>
       <button class="car-dot" aria-label="Artwork 4"></button>
     </div>
+  </div>
+
+  <div class="wrap" style="margin-top:24px">
+    <div class="rollwrap">
+      <div class="artroll" id="artroll"></div>
+      <button class="car-btn car-prev" id="artPrev" type="button" aria-label="Scroll left">‹</button>
+      <button class="car-btn car-next" id="artNext" type="button" aria-label="Scroll right">›</button>
+    </div>
+    <div class="center" style="margin-top:12px"><a class="seeall" href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener">See all 38 artworks on Gan Jing World →</a></div>
   </div>
 </section>
 
@@ -708,8 +747,47 @@
    ];
    var h='';e.forEach(function(x){h+='<a class="comcard" href="'+x[1]+'" target="_blank" rel="noopener"><img loading="lazy" src="'+x[0]+'" alt=""><span class="play"></span></a>';});el.innerHTML=h;})();
 
+  // Excellence Award artworks
+  (function(){var el=document.getElementById("artroll");if(!el)return;var a=[
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/9d/34/60/9d34600e-2be6-4502-af7c-d002d79725ac/672.webp","Grades 1–3","EB","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/ca/d7/0b/cad70b10-5557-49c2-9e87-0caafba9c865/672.webp","Grades 1–3","EX","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/e1/98/5c/e1985c9e-cb10-4c4c-a322-14e971cea38a/672.webp","Grades 1–3","FP","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/97/cb/94/97cb94e8-7e05-48b2-9906-1c67068f41a6/672.webp","Grades 1–3","KP","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/59/f8/c2/59f8c2b1-48c6-4bb5-8678-73a691f35243/672.webp","Grades 1–3","MP","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/65/30/0d/65300db3-456f-43c9-9d09-e689e5d70e4a/672.webp","Grades 1–3","SW","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/cd/ce/b2/cdceb214-09a9-4e47-9d95-2834e47e416e/672.webp","Grades 1–3","TW","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/cf/42/85/cf42850c-2806-40d1-9796-5e1e099f7f6f/672.webp","Grades 1–3","VS","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/2a/40/02/2a400211-59cc-4ea4-8e3e-f7ca413c5db5/672.webp","Grades 1–3","EH","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/be/e0/11/bee01128-89b7-40a1-aeb2-7fd92e09035c/672.webp","Grades 1–3","LR","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/39/93/ce/3993ce9f-5a57-4e40-80ba-cb3856faf230/672.webp","Grades 4–6","A. Wang","Vera Art Studio"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/a6/b5/7b/a6b57b83-2796-48a2-af75-065d0cec8cb1/672.webp","Grades 4–6","SS","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/26/7b/f1/267bf1ab-ce99-4c2b-96b9-80d5e33748ad/672.webp","Grades 4–6","SG","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/25/9e/3a/259e3a42-4b26-4774-b68e-fa74f1d333c1/672.webp","Grades 4–6","RM","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/13/94/71/13947109-777d-43cd-a099-3b8f38f6fc3d/672.webp","Grades 4–6","OS","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/54/e5/cc/54e5cc8a-745b-449d-addd-faacfc8034b4/672.webp","Grades 4–6","MES","Skano Elementary"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/79/52/48/79524847-0e67-4889-9449-11720ab0546b/672.webp","Grades 4–6","JA","Roosevelt School, NJ"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/f0/f8/ab/f0f8ab99-c3d4-4cfa-a7e8-a5ee9b7ac8d2/672.webp","Grades 4–6","OS","Jotham W. Wakeman No. 6"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/7e/c3/70/7ec3709d-0268-4cc2-b60d-53e3562ace48/672.webp","Grades 4–6","Akhil P.","DCES"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/07/d1/1f/07d11f66-b33b-4670-bd32-9fa7bdf6af62/672.webp","Grades 4–6","YB","High School of the Arts"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/dc/ab/27/dcab2703-4281-449f-a337-294341f904de/672.webp","Grades 7–9","I. Carvalho","Ann Street School"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/68/57/85/68578508-bdd7-41d5-ab6d-3d0a79969edf/672.webp","Grades 7–9","Arsh P.","Seneca Falls Middle"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/53/ad/f5/53adf589-85bb-4a1e-9d13-ab177aa50bc7/672.webp","Grades 7–9","EL","Challenger School"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/33/93/d1/3393d172-db0f-4060-8d7b-036e1c90dba8/672.webp","Grades 7–9","TA","BH-BL O'Rourke Middle"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/6d/b2/92/6db29269-7cdc-44dd-9e12-713a292d1f63/672.webp","Grades 7–9","QC","BH-BL O'Rourke Middle"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/9d/27/20/9d2720f2-1c26-4a79-a396-3e76b1c1afd3/672.webp","Grades 7–9","DF","BH-BL O'Rourke Middle"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/55/89/27/558927fd-175d-45f3-b9a7-efc8b2c080d6/672.webp","Grades 7–9","DLQ","Lakewood Middle"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/5a/40/2f/5a402f7c-269e-4d58-afbf-e08c8553ffd9/672.webp","Grades 7–9","JC","Lakewood Middle"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/ef/42/96/ef4296bd-4c36-4d25-aabc-bf5734ff5a1c/672.webp","Grades 7–9","KR","Lakewood Middle"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/34/7a/f1/347af16c-4072-4a70-8f08-a75340b9e3a2/672.webp","Grades 7–9","CF","Northern Academy of Arts"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/6a/3b/e0/6a3be02b-7546-4b32-acde-7c6ca8bc7290/672.webp","Grades 10–12","CB","BH-BL High School"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/c0/b6/c6/c0b6c6f2-7045-4e1c-b47a-cf65162d3bc2/672.webp","Grades 10–12","CK","BH-BL High School"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/53/86/f3/5386f31c-edce-420f-8282-90d783f637a1/672.webp","Grades 10–12","MM","BH-BL High School"],
+    ["https://image1-us-east.cloudokyo.cloud/image/v14/3f/3d/38/3f3d38fd-2e62-4ba5-a653-1a211eb60c84/672.webp","Grades 10–12","S.R.D.","BH-BL High School"]
+  ];
+   var h="";a.forEach(function(x){h+='<div class="agcard"><div class="frame"><img loading="lazy" src="'+x[0]+'" alt=""></div><div class="cap"><b>'+x[1]+'</b> · '+x[2]+'<br>'+x[3]+'</div></div>';});el.innerHTML=h;})();
+
   function wireRoll(rid,pid,nid){var r=document.getElementById(rid);if(!r)return;function amt(){return Math.min(r.clientWidth*0.85,640);}var pv=document.getElementById(pid),nx=document.getElementById(nid);if(pv)pv.addEventListener('click',function(){r.scrollBy({left:-amt(),behavior:'smooth'});});if(nx)nx.addEventListener('click',function(){r.scrollBy({left:amt(),behavior:'smooth'});});}
-  wireRoll('ashorts','ambPrev','ambNext'); wireRoll('pressroll','pressPrev','pressNext'); wireRoll('comroll','comPrev','comNext');
+  wireRoll('ashorts','ambPrev','ambNext'); wireRoll('pressroll','pressPrev','pressNext'); wireRoll('comroll','comPrev','comNext'); wireRoll('artroll','artPrev','artNext');
 </script>
 </body>
 </html>
