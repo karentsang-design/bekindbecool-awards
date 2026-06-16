@@ -126,17 +126,17 @@
 
   /* BENEFITS */
   .benefits{background:var(--cloud)}
-  .bgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
-  @media(max-width:640px){.bgrid{grid-template-columns:1fr}}
-  .bcard{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden}
-  .bface{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:30px;transition:opacity .35s}
+  .bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+  @media(max-width:760px){.bgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:2px 2px 10px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}.bgrid .bcard{flex:0 0 72%;scroll-snap-align:start}}
+  .bcard{position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden}
+  .bface{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:24px;transition:opacity .35s}
   .bcard.cblue .bface{background:#1f4fd0;color:#fff}
   .bcard.cgold .bface{background:#f4b740;color:#15171c}
-  .bface .big{font-size:clamp(2.1rem,3.2vw,2.9rem);font-weight:800;letter-spacing:-.02em;line-height:1.02}
-  .bface .sub{font-size:clamp(1.05rem,1.5vw,1.3rem);font-weight:800;line-height:1.16;margin-top:6px;opacity:.95}
+  .bface .big{font-size:clamp(2.4rem,3.1vw,3.1rem);font-weight:800;letter-spacing:-.03em;line-height:1.0}
+  .bface .sub{font-size:clamp(1.15rem,1.55vw,1.45rem);font-weight:800;line-height:1.18;margin-top:8px;opacity:.95}
   .bback{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .35s}
   .bback .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,28,60,.35),rgba(16,28,60,.85))}
-  .bback .txt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:26px;color:#fff;z-index:2}
+  .bback .txt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;z-index:2}
   .bback .txt h4{font-size:1.3rem;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
   .bback .txt p{font-size:1.02rem;line-height:1.42;opacity:.96}
   .bcard:hover .bback{opacity:1}
