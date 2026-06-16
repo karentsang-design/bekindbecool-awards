@@ -126,15 +126,21 @@
 
   /* BENEFITS */
   .benefits{background:var(--cloud)}
-  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-  @media(max-width:820px){.bgrid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.bgrid{grid-template-columns:1fr}}
-  .bcard{display:flex;align-items:flex-end;aspect-ratio:4/3;border-radius:18px;padding:24px;overflow:hidden;transition:transform .16s}
-  .bcard:hover{transform:translateY(-4px)}
-  .bcard h3{font-size:clamp(1.35rem,2.1vw,1.8rem);font-weight:800;line-height:1.12;letter-spacing:-.015em}
-  .bcard h3 .big{display:block;font-size:clamp(2.2rem,3.6vw,3rem);line-height:1;letter-spacing:-.025em;margin-bottom:2px}
-  .bcard.cblue{background:#1f4fd0;color:#fff}
-  .bcard.cgold{background:#f4b740;color:#15171c}
+  .bgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+  @media(max-width:640px){.bgrid{grid-template-columns:1fr}}
+  .bcard{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden}
+  .bface{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:30px;transition:opacity .35s}
+  .bcard.cblue .bface{background:#1f4fd0;color:#fff}
+  .bcard.cgold .bface{background:#f4b740;color:#15171c}
+  .bface .big{font-size:clamp(2.1rem,3.2vw,2.9rem);font-weight:800;letter-spacing:-.02em;line-height:1.02}
+  .bface .sub{font-size:clamp(1.05rem,1.5vw,1.3rem);font-weight:800;line-height:1.16;margin-top:6px;opacity:.95}
+  .bback{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .35s}
+  .bback .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,28,60,.35),rgba(16,28,60,.85))}
+  .bback .txt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:26px;color:#fff;z-index:2}
+  .bback .txt h4{font-size:1.3rem;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+  .bback .txt p{font-size:1.02rem;line-height:1.42;opacity:.96}
+  .bcard:hover .bback{opacity:1}
+  .bcard:hover .bface{opacity:0}
 
   /* TRACKS + PRIZES */
   .tracks-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
@@ -463,12 +469,22 @@
 <section class="benefits" id="benefits"><div class="wrap">
   <div class="center"><h2 class="st">Why you should join</h2><p class="sub">More than a contest — recognition that puts your kindness on the world stage.</p></div>
   <div class="bgrid">
-    <div class="bcard cblue"><h3><span class="big">$10,000</span>total prize</h3></div>
-    <div class="bcard cgold"><h3>Times Square billboard showcase</h3></div>
-    <div class="bcard cblue"><h3>Awards celebration in NYC</h3></div>
-    <div class="bcard cgold"><h3>Kindness certificates</h3></div>
-    <div class="bcard cblue"><h3>Media coverage</h3></div>
-    <div class="bcard cgold"><h3>Featured creator spotlight</h3></div>
+    <div class="bcard cblue">
+      <div class="bface"><div class="big">$10,000</div><div class="sub">total prize</div></div>
+      <div class="bback" style="background-image:url('assets/b_prize.webp')"><span class="scrim"></span><div class="txt"><h4>$10,000 in prizes</h4><p>Gold, Silver, Bronze and School Edition awards &mdash; shared among winners every year.</p></div></div>
+    </div>
+    <div class="bcard cgold">
+      <div class="bface"><div class="big">Times Square</div><div class="sub">billboard showcase</div></div>
+      <div class="bback" style="background-image:url('assets/b_billboard.jpg')"><span class="scrim"></span><div class="txt"><h4>Times Square billboard</h4><p>Winning entries light up the Nasdaq billboard in the heart of New York City.</p></div></div>
+    </div>
+    <div class="bcard cgold">
+      <div class="bface"><div class="big">Kindness Star</div><div class="sub">winner certificates</div></div>
+      <div class="bback" style="background-image:url('assets/b_certificate.png')"><span class="scrim"></span><div class="txt"><h4>Kindness Star certificates</h4><p>Winners and standout creators receive official Kindness Star certificates.</p></div></div>
+    </div>
+    <div class="bcard cblue">
+      <div class="bface"><div class="big">Spotlight</div><div class="sub">NYC celebration &amp; media coverage</div></div>
+      <div class="bback" style="background-image:url('assets/b_celebration.jpg')"><span class="scrim"></span><div class="txt"><h4>Celebrated &amp; covered</h4><p>Winners are honored at the NYC awards celebration and featured across partner media.</p></div></div>
+    </div>
   </div>
 </div></section>
 
