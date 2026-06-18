@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Schools &amp; Teachers — #BeKindBeCool Kindness Awards 2026–27</title>
+<meta name="description" content="A free, ready-to-run #BeKindBeCool School Edition for grades 1–12 — start in one 45-minute lesson. Teacher's Guide, prizes, and a Times Square showcase from Gan Jing World.">
+<style>
+  :root{
+    --teal:#15171c;--teal-dark:#0a5a62;--coral:#ff5234;--gold:#f4b740;--blue:#1f4fd0;
+    --ink:#15171c;--slate:#6f747c;--cloud:#f5f3ef;--line:#e7e4dd;--white:#fff;
+    --radius:12px;--shadow:0 10px 30px rgba(20,20,25,.08);
+    --max:1200px;--font:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--white);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  section{padding:clamp(58px,8vw,96px) 0}
+  h2.st{font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:12px}
+  .sub{color:var(--slate);font-size:1.12rem;max-width:60ch;line-height:1.55}
+  .center{text-align:center}.center .sub{margin:0 auto}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:1.02rem;padding:14px 28px;border-radius:999px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .2s,color .15s}
+  .btn-primary{background:linear-gradient(45deg,#0187FD,#00B0FC);color:#fff;box-shadow:0 10px 22px rgba(1,135,253,.32)}
+  .btn-primary:hover{background:linear-gradient(45deg,#F7941E,#FFD601);color:#15171c;transform:translateY(-1px)}
+  .btn-dark{background:var(--coral);color:#fff}.btn-dark:hover{transform:translateY(-1px)}
+  .btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-outline:hover{transform:translateY(-2px);border-color:var(--blue);color:var(--blue)}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+  .brand .logo{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#1f5fd6,#ff7a3c);display:grid;place-items:center;color:#fff}
+  .brandlogo{height:26px;width:auto;display:block}
+  .brandsub{font-size:.64rem;font-weight:600;color:var(--slate);letter-spacing:.03em}
+  .brand small{display:block;font-size:.62rem;font-weight:600;color:var(--slate);letter-spacing:.03em}
+  .nav-links{display:flex;gap:22px;align-items:center}
+  .nav-links a{font-size:.78rem;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.06em}
+  .nav-links a:hover{color:var(--teal)}
+  .nav-links .btn{padding:9px 18px;font-size:.86rem;color:#fff}
+  @media(max-width:860px){.nav-links a:not(.btn){display:none}}
+
+  /* HERO */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+  .hero{background:#fff;padding:18px 0 36px}
+  .hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero-visual{width:100%;max-width:1080px;overflow:hidden}
+  .hero-visual img{width:100%;display:block}
+  .hero .lead{margin:74px auto 10px;max-width:52ch;color:var(--slate);font-size:clamp(1.36rem,2.3vw,1.74rem);line-height:1.5;font-weight:500}
+  .hero .hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+  .hero-hooks{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;margin:26px auto 26px;max-width:1080px;padding:0;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-hooks li{flex:1 1 200px;padding:26px 22px;text-align:center;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center}
+  .hero-hooks li:last-child{border-right:none}
+  .hero-hooks li b{display:block;font-size:clamp(1.8rem,2.6vw,2.3rem);color:var(--blue);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+  .hero-hooks li span{display:block;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--slate);margin-top:auto;padding-top:10px}
+  @media(max-width:620px){.hero-hooks{max-width:460px;margin-top:10px}.hero-hooks li{flex:1 1 45%;padding:16px 10px;border-bottom:1px solid var(--line)}.hero-hooks li b{font-size:1.35rem}}
+  .hero-how{display:inline-block;font-size:1rem;font-weight:700;color:var(--blue)}
+  .hero-how:hover{text-decoration:underline}
+  .statline{margin:42px 0 0;width:100%}
+  .statline .mtrack{gap:0;animation-duration:44s}
+  .stat-item{flex:0 0 auto;text-align:center;padding:0 clamp(24px,4vw,46px)}
+  .stat-item .n{font-size:clamp(2.6rem,5vw,4rem);font-weight:800;letter-spacing:-.035em;color:var(--ink);line-height:1}
+  .stat-item .l{font-size:.72rem;text-transform:uppercase;letter-spacing:.11em;color:var(--slate);margin-top:10px}
+  .icap{font-size:.78rem;color:var(--slate);margin-top:20px}
+  @media(max-width:600px){
+    .hero{padding:8px 0 22px}
+    .hero .wrap{padding-left:12px;padding-right:12px}
+    .hero .lead{font-size:1.18rem;line-height:1.48;margin:48px auto 14px;max-width:42ch}
+    .hero-cta{width:100%}
+    .hero-cta .btn{flex:1 1 auto;justify-content:center}
+    .statline{margin-top:30px}
+  }
+  /* WINNER STRIP */
+  .wstrip{padding:22px 0 26px;border-top:1px solid var(--line)}
+  .wstrip .wlab{display:inline-block;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--slate);margin-bottom:14px}
+  .wstrip .wlab:hover{color:var(--ink)}
+  .wthumb{flex:0 0 158px;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid var(--line);display:block;transition:transform .16s}
+  .wthumb:hover{transform:translateY(-3px)}
+  .wthumb img{width:100%;height:100%;object-fit:cover}
+
+  /* FLOW — one-line steps */
+  .flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px 30px;margin-top:18px}
+  .fstep{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+  .fdot{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.88rem;flex:0 0 auto}
+  .fstep span{font-weight:600;font-size:clamp(.82rem,2.1vw,1.02rem);white-space:nowrap}
+  .fline{flex:1 1 24px;min-width:16px;max-width:64px;border-top:2px dotted #c3bdb1}
+  .enter-card{max-width:none;margin:0 auto;text-align:center}
+  .hiw{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:8px;background:#eef4ff;border:1px solid #dbe7fc;border-radius:20px;padding:44px 34px}
+  .hiw-step{flex:1 1 200px;max-width:290px;text-align:center;padding:10px 18px}
+  .hiw-ic{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;box-shadow:0 6px 16px rgba(20,40,80,.18)}
+  .hiw-ic svg{width:33px;height:33px}
+  .hiw-step h4{font-size:1.3rem;font-weight:800;margin-bottom:8px;color:var(--ink)}
+  .hiw-step p{font-size:1.04rem;color:var(--slate);line-height:1.5}
+  .hiw-arrow{align-self:center;margin-top:26px;color:#9db8e6;font-size:1.9rem;font-weight:700;flex:0 0 auto}
+  @media(max-width:760px){.hiw{padding:22px 14px}.hiw-arrow{display:none}.hiw-step{flex:1 1 42%;max-width:none}}
+  @media(max-width:600px){
+    .enter-card .flow{flex-direction:column;align-items:center;gap:16px;margin-top:8px}
+    .enter-card .fline{display:none}
+    .enter-card .fstep span{white-space:normal;font-size:1.06rem}
+  }
+  /* HOW formats + flip cards */
+  .formats{text-align:center;margin-top:28px}
+  .fmt-lbl{display:block;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--slate);margin-bottom:12px}
+  .fmt-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .fmt-row span{font-weight:700;font-size:.92rem;border:1.5px solid var(--line);border-radius:999px;padding:9px 18px}
+  .flip-h{font-size:1.35rem;font-weight:800;letter-spacing:-.01em;margin-top:4px}
+  @keyframes dealin{from{opacity:0;transform:translateY(16px) scale(.95)}to{opacity:1;transform:none}}
+  .flipgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:10px}
+  @media(max-width:760px){
+    .flipgrid{display:flex;grid-template-columns:none;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;padding:4px 4px 12px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}
+    .flipgrid::-webkit-scrollbar{height:7px}.flipgrid::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+    .flipgrid .flipcard{flex:0 0 150px;scroll-snap-align:start}
+  }
+  .flipcard{aspect-ratio:198/270;perspective:1000px;cursor:pointer;animation:dealin .5s ease both}
+  .flipinner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+  .flipcard.flipped .flipinner{transform:rotateY(180deg)}
+  .flipface{position:absolute;inset:0;border-radius:14px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--line)}
+  .flipface img{width:100%;height:100%;object-fit:cover;display:block}
+  .flipback{transform:rotateY(180deg)}
+  .farrow{position:absolute;right:9px;bottom:9px;width:24px;height:24px;border-radius:50%;background:rgba(20,20,25,.3);z-index:2}
+  .farrow::after{content:"";position:absolute;top:50%;left:45%;width:6px;height:6px;border-top:2px solid rgba(255,255,255,.92);border-right:2px solid rgba(255,255,255,.92);transform:translate(-50%,-50%) rotate(45deg)}
+
+  /* BENEFITS */
+  .benefits{background:var(--cloud)}
+  .bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+  @media(max-width:760px){.bgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:2px 2px 10px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}.bgrid .bcard{flex:0 0 72%;scroll-snap-align:start}}
+  .bcard{position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden}
+  .bface{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:24px;transition:opacity .35s}
+  .bcard.cblue .bface{background:#1f4fd0;color:#fff}
+  .bcard.cgold .bface{background:#f4b740;color:#15171c}
+  .bface .big{font-size:clamp(2.4rem,3.1vw,3.1rem);font-weight:800;letter-spacing:-.03em;line-height:1.0}
+  .bface .sub{font-size:clamp(1.15rem,1.55vw,1.45rem);font-weight:800;line-height:1.18;margin-top:8px;opacity:.95}
+  .bback{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .35s}
+  .bback .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,28,60,.35),rgba(16,28,60,.85))}
+  .bback .txt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;z-index:2}
+  .bback .txt h4{font-size:1.3rem;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+  .bback .txt p{font-size:1.02rem;line-height:1.42;opacity:.96}
+  .bcard:hover .bback{opacity:1}
+  .bcard:hover .bface{opacity:0}
+
+  /* TRACKS + PRIZES */
+  .tracks-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  @media(max-width:760px){.tracks-grid{grid-template-columns:1fr}}
+  .track{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff}
+  .tlabel{font-weight:800;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;padding:5px 12px;border-radius:999px;display:inline-block;margin-bottom:10px}
+  .track.open .tlabel{background:#ffe9e3;color:#c2371d}
+  .track.school .tlabel{background:#e7effb;color:var(--blue)}
+  .track h3{font-size:1.18rem;margin-bottom:4px}
+  .track p{font-size:.9rem;color:var(--slate)}
+  .pchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .pchip{font-size:.82rem;font-weight:700;background:var(--cloud);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+  .ptotal{margin-top:16px;text-align:center;background:#fff;border:1.5px dashed var(--blue);border-radius:14px;padding:14px 18px;font-weight:700;font-size:.96rem}
+  .ptotal strong{color:var(--blue)}
+  .stars-note{margin-top:14px;background:linear-gradient(135deg,#0d2440,#27324a);color:#fff;border-radius:14px;padding:16px 22px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .stars-note p{font-size:.88rem;color:rgba(255,255,255,.85);max-width:70ch}
+  .stars-note .t{font-weight:800;color:#fff}
+
+  /* JUDGING one line */
+  .judge-line{display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;background:var(--cloud);border:1px solid var(--line);border-radius:14px;padding:16px 22px;text-align:center;font-size:.98rem}
+  .judge-line strong{color:var(--blue)}
+  .judge-line .lbl{font-weight:800}
+
+  /* TIMELINE (key dates + journey) */
+  .htl{display:flex;gap:0;overflow-x:auto;padding:8px 2px 14px;scrollbar-width:thin}
+  .tstep{flex:1 1 0;min-width:210px;position:relative;padding:0 18px}
+  .tstep:not(:last-child):after{content:"";position:absolute;top:13px;left:50%;right:-50%;height:2px;background:var(--line)}
+  .tdot{width:26px;height:26px;border-radius:50%;background:#fff;border:3px solid var(--coral);position:relative;z-index:2;display:grid;place-items:center;font-size:.7rem;font-weight:800;color:var(--coral);margin-bottom:12px}
+  .tstep.now .tdot{background:var(--coral);color:#fff}
+  .tyear{font-weight:800;color:var(--teal);font-size:.92rem}
+  .tstep h3{font-size:.98rem;margin:2px 0 4px}
+  .tstep p{font-size:.84rem;color:var(--slate)}
+
+  /* CTA BAND */
+  .cta-band{background:transparent;color:var(--ink);text-align:center}
+  .cta-band h2{font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:-.03em;font-weight:800;max-width:none;margin:0 auto 10px}
+  .cta-band p{font-size:1rem;max-width:46ch;margin:0 auto 18px;color:rgba(255,255,255,.92)}
+  .ts-note{font-size:.8rem;color:rgba(255,255,255,.7);margin-top:14px}
+
+  /* ROLL */
+  .yeartabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .yeartab{font-weight:700;font-size:.84rem;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--slate);cursor:pointer;transition:.15s}
+  .yeartab:hover{border-color:var(--blue);color:var(--blue)}
+  .yeartab.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 6px 16px rgba(31,79,208,.28)}
+  @media(max-width:600px){.yeartabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}.yeartabs::-webkit-scrollbar{display:none}.yeartab{flex:0 0 auto}}
+  .yearpanel{display:none}.yearpanel.active{display:block}
+  .roll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}
+  .roll::-webkit-scrollbar{height:8px}
+  .roll::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+  .vcard{flex:0 0 min(460px,82vw);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .16s,box-shadow .16s}
+  .vcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .vcard.lg{flex-basis:min(460px,82vw)}
+  .thumb{position:relative;aspect-ratio:16/9;background:#0c1622;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover}
+  .thumb.gen{display:grid;place-items:center;text-align:center;padding:14px;color:#fff;font-weight:700;font-size:.95rem}
+  .badge{position:absolute;top:9px;left:9px;font-weight:800;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;padding:4px 9px;border-radius:7px;backdrop-filter:blur(4px)}
+  .b-gold{background:rgba(255,215,90,.95);color:#7a5600}
+  .b-silver{background:rgba(232,236,240,.95);color:#4a5462}
+  .b-bronze{background:rgba(214,140,90,.95);color:#fff}
+  .b-special{background:rgba(90,120,220,.95);color:#fff}
+  .play{position:absolute;right:9px;bottom:9px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.55);display:grid;place-items:center;color:#fff;font-size:.7rem}
+  .play::after,.splay::after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid #fff;margin-left:2px}
+  .vbody{padding:14px 16px}
+  .vbody h3{font-size:1.06rem;line-height:1.28;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.3em}
+  .vbody .who{font-size:.78rem;color:var(--teal);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  /* MEET THE GOLD WINNERS */
+  .gw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:28px}
+  @media(max-width:760px){.gw-grid{grid-template-columns:1fr;gap:34px}}
+  .gw{text-align:center}
+  .gw .pic{position:relative;aspect-ratio:3/2;border-radius:14px;overflow:hidden;margin-bottom:14px;background:#eef2f5}
+  .gw .pic img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .gw .yr{font-weight:800;color:var(--blue);font-size:.86rem;text-transform:uppercase;letter-spacing:.06em}
+  .gw h3{font-size:1.2rem;margin:4px 0 8px;letter-spacing:-.01em;line-height:1.15}
+  .gw p{color:var(--slate);font-size:.93rem;line-height:1.55;max-width:34ch;margin:0 auto}
+
+  /* CATEGORIES & PRIZES */
+  .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  @media(max-width:760px){.cat-grid{grid-template-columns:1fr}}
+  .catcard{position:relative;display:block;aspect-ratio:16/10;border-radius:18px;overflow:hidden;color:#fff;border:1px solid var(--line)}
+  .cimg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s}
+  .catcard:hover .cimg{transform:scale(1.05)}
+  .cscrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,25,0) 32%,rgba(20,20,25,.6))}
+  .cbody{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+  .ctag{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;opacity:.85}
+  .catcard h3{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800;letter-spacing:-.02em;line-height:1.03;margin:4px 0 6px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+  .catcard p{font-size:.95rem;opacity:.92;margin-bottom:10px;max-width:42ch}
+  .catcard .more{font-weight:800;font-size:.9rem}
+  .prizes-block{margin-top:34px}
+  .pz-h{font-size:1.2rem;font-weight:800;letter-spacing:-.01em}
+  .prizelist{list-style:none;margin-top:14px;max-width:720px}
+  .prizelist li{display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding:13px 0}
+  .pname{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:9px;min-width:0}
+  .tg{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:999px;background:var(--cloud);color:var(--slate);white-space:nowrap}
+  .tg.open{background:#ffe9e3;color:#c2371d}
+  .tg.school{background:#e7effb;color:var(--blue)}
+  .prizelist b{font-weight:800;white-space:nowrap;font-size:1.02rem}
+  .catcol{display:flex;flex-direction:column}
+  .toolkit-mini{margin-top:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .tk-note{font-size:.76rem;color:var(--slate);max-width:38ch}
+  .btn-sm{padding:10px 18px;font-size:.92rem}
+  .hero-credit{font-size:.72rem;color:var(--slate);opacity:.85;margin-top:8px}
+  .toolkit strong{color:#1f5fd6}
+  .toolkit .btn{flex:0 0 auto}
+  .pcols{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:16px}
+  @media(max-width:680px){.pcols{grid-template-columns:1fr;gap:26px}}
+  .pcat{font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-bottom:9px;border-bottom:2px solid var(--ink);margin-bottom:2px}
+  .pcat.open{color:var(--coral);border-color:var(--coral)}
+  .pcat.school{color:var(--blue);border-color:var(--blue)}
+  .pcat-note{text-transform:none;letter-spacing:0;font-weight:600;font-size:.72rem;color:var(--slate)}
+  .plist{list-style:none}
+  .plist li{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding:12px 0;font-weight:700;font-size:1.02rem}
+  .plist li b{font-weight:800;white-space:nowrap}
+  .scoreline{margin-top:18px;color:var(--slate);font-size:.96rem;line-height:1.55}
+  .scoreline b{color:var(--ink)}
+  .kstar{margin-top:30px;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:16px;padding:24px 28px}
+  .kstar p{font-size:1.05rem;font-weight:600;flex:1 1 360px;min-width:0;margin:0}
+  .kstar .btn{flex:0 0 auto}
+
+  /* ARTWORK CAROUSEL */
+  @keyframes cfade{from{opacity:0}to{opacity:1}}
+  .artwork{background:var(--cloud)}
+  .car{position:relative;max-width:900px;margin:18px auto 0}
+  .car-stage{position:relative;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .car-slide{display:none;grid-template-columns:1fr}
+  .car-slide.active{display:grid;animation:cfade .5s ease}
+  @media(min-width:680px){.car-slide{grid-template-columns:1.15fr 1fr}}
+  .car-img{aspect-ratio:1/1;background:#eef2f5;overflow:hidden}
+  .car-img img{width:100%;height:100%;object-fit:cover}
+  .car-cap{padding:26px 30px;display:flex;flex-direction:column;justify-content:center;text-align:left}
+  .car-cap .grade{display:inline-block;font-weight:800;color:#fff;background:var(--blue);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;padding:5px 12px;border-radius:999px;width:max-content;margin-bottom:12px}
+  .car-cap h3{font-size:1.18rem;margin-bottom:8px}
+  .car-cap p{color:var(--slate);font-size:.95rem;line-height:1.6}
+  .car-cap .who{margin-top:12px;font-weight:700;color:var(--blue);font-size:.88rem}
+  .car-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);cursor:pointer;font-size:1.2rem;color:var(--ink);display:grid;place-items:center;z-index:3;line-height:1}
+  .car-btn:hover{background:var(--cloud)}
+  .car-prev{left:-10px}.car-next{right:-10px}
+  .car-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
+  .car-dot{width:9px;height:9px;border-radius:50%;background:#c8d4e2;border:none;cursor:pointer;padding:0;transition:.2s}
+  .car-dot.active{background:var(--blue);width:24px;border-radius:6px}
+  .artroll{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 14px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent;margin-top:16px}
+  .artroll::-webkit-scrollbar{height:8px}.artroll::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+  .rollwrap{position:relative}
+  .agcard{flex:0 0 158px;scroll-snap-align:start}
+  .agcard .frame{aspect-ratio:1/1;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#eef2f5}
+  .agcard .frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .agcard .cap{font-size:.72rem;color:var(--slate);margin-top:6px;line-height:1.3}
+  .agcard .cap b{color:var(--ink);font-weight:700}
+  @media(max-width:520px){.car-prev{left:4px}.car-next{right:4px}}
+
+  /* ENDORSEMENTS */
+  .qgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+  @media(max-width:680px){.qgrid{grid-template-columns:1fr}}
+  .quote{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;border-left:4px solid var(--coral)}
+  .quote p{font-size:.95rem;margin-bottom:8px;line-height:1.55}
+  .quote .by{font-weight:800;font-size:.86rem;display:inline}
+  .quote .role{font-size:.8rem;color:var(--slate);display:inline}
+  .ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+  @media(max-width:820px){.ngrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.ngrid{grid-template-columns:1fr}}
+  .ncard{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .16s,box-shadow .16s}
+  .ncard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .nthumb{aspect-ratio:16/9;overflow:hidden;background:#eef2f5}
+  .nthumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .nbody{padding:14px 16px}
+  .ncard h3{font-size:.98rem;line-height:1.32;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .nsrc{font-size:.78rem;color:var(--blue);font-weight:700;margin-top:10px}
+  .nroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent;margin-top:18px}
+  .nroll::-webkit-scrollbar{height:8px}.nroll::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+  .nroll .ncard{flex:0 0 300px;scroll-snap-align:start}
+  .comroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 16px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}
+  .comroll::-webkit-scrollbar{height:8px}.comroll::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+  .comcard{flex:0 0 280px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);display:block;position:relative;scroll-snap-align:start;transition:transform .16s}
+  .comcard:hover{transform:translateY(-3px)}
+  .comcard img{width:100%;height:100%;object-fit:cover}
+  /* CEREMONY GALLERY */
+  .galgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+  @media(max-width:900px){.galgrid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:600px){.galgrid{grid-template-columns:repeat(2,1fr);gap:10px}}
+  .galphoto{display:block;aspect-ratio:4/3;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#eef2f5}
+  .galphoto img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .galphoto:hover img{transform:scale(1.04)}
+  .gal-sub{font-size:1.3rem;font-weight:800;letter-spacing:-.01em}
+  .vidroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}
+  .vidroll::-webkit-scrollbar{height:8px}.vidroll::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+  .vidcard{flex:0 0 300px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .16s,box-shadow .16s}
+  .vidcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .vidthumb{position:relative;aspect-ratio:16/9;background:#0c1622;overflow:hidden;cursor:pointer}
+  .vidthumb img{width:100%;height:100%;object-fit:cover}
+  .vidthumb .bigplay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+  .vidgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+  @media(max-width:820px){.vidgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.vidgrid{grid-template-columns:1fr}}
+  .ndate{font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}
+
+  /* MARQUEE */
+  .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .mtrack{display:flex;gap:22px;width:max-content;animation:scrollx 38s linear infinite}
+  .marquee:hover .mtrack{animation-play-state:paused}
+  @keyframes scrollx{to{transform:translateX(-50%)}}
+  .creator{width:96px;text-align:center;flex:0 0 auto}
+  .avatar{width:74px;height:74px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.3rem;box-shadow:0 4px 14px rgba(16,40,60,.15);overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+  .creator .avatar.sm{font-size:.98rem;letter-spacing:.02em}
+  .creator.school{width:116px}
+  .creator.school .cn{white-space:normal;overflow:visible;line-height:1.18}
+  .creator{transition:transform .15s}
+  .creator:hover{transform:translateY(-3px)}
+  .creator:hover .avatar{outline-color:var(--blue)}
+  .creator .cn{font-size:.74rem;font-weight:700;line-height:1.2;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .creator .cf{font-size:.72rem;color:var(--teal);font-weight:700}
+
+  /* PLEDGE WALL preview */
+  .ptile{flex:0 0 232px;border-radius:14px;padding:16px;color:#fff}
+  .ptile .ck{font-weight:800;font-size:.76rem;opacity:.92;margin-bottom:5px}
+  .ptile .why{font-size:1rem;font-weight:700;line-height:1.3}
+  .ptile .who{margin-top:9px;font-size:.78rem;opacity:.9;font-weight:600}
+
+  /* AMBASSADOR SHORTS */
+  .shorts{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-width:thin;scrollbar-color:#cdd9e1 transparent}
+  .shorts::-webkit-scrollbar{height:8px}.shorts::-webkit-scrollbar-thumb{background:#cdd9e1;border-radius:8px}
+  .rollnav{display:flex;gap:8px}
+  .rnav{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--line);cursor:pointer;font-size:1.25rem;line-height:1;color:var(--ink)}
+  .rnav:hover{background:var(--cloud);color:var(--blue)}
+  .scard{flex:0 0 208px;scroll-snap-align:start;position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid var(--line);color:#fff;display:block}
+  .simg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s}
+  .scard:hover .simg{transform:scale(1.05)}
+  .sscrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,25,.18) 30%,rgba(20,20,25,.8))}
+  .splay{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:.78rem;z-index:2;border:1px solid rgba(255,255,255,.45)}
+  .scap{position:absolute;left:14px;right:14px;bottom:14px;z-index:2}
+  .squote{font-weight:800;font-size:.98rem;line-height:1.25;margin-bottom:9px;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+  .sname{font-size:.82rem;font-weight:800}
+  .short-facade{cursor:pointer;display:grid;place-items:center;color:#fff}
+  .short-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .short-facade .sscrim{display:none}
+  .bigplay{position:relative;z-index:2;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--ink);display:grid;place-items:center;font-size:1rem;padding-left:3px;box-shadow:0 6px 18px rgba(0,0,0,.28);transition:transform .15s}
+  .short-facade:hover .bigplay{transform:scale(1.08)}
+  .sfans{font-size:.72rem;opacity:.86;font-weight:600}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:center}
+  .about .lead-c h2{margin-bottom:4px}
+  .acol{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+  .acol h3{font-size:1rem;margin-bottom:4px}.acol p{font-size:.85rem;color:var(--slate)}
+  @media(max-width:820px){.about{grid-template-columns:1fr}}
+
+  /* FOOTER */
+  footer{background:linear-gradient(45deg,#0187FD,#00B0FC);color:rgba(255,255,255,.85);padding:30px 0 26px}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-top .brand{color:#fff}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}.foot-links a{font-size:.88rem}.foot-links a:hover{color:#fff}
+  .tags{margin-top:16px;font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.8}
+  .footabout{margin-top:16px;font-size:.85rem;color:rgba(255,255,255,.62);max-width:92ch;line-height:1.6}
+  .footabout strong{color:#fff}
+  .copy{margin-top:12px;font-size:.78rem;color:rgba(255,255,255,.45)}
+  .note{max-width:var(--max);margin:10px auto 0;padding:0 22px;font-size:.72rem;color:rgba(255,255,255,.38)}
+</style>
+<style>
+  .shero{background:#fff;padding:54px 0 0;overflow:hidden}
+  .hero-brand{display:flex;flex-direction:column;align-items:center;gap:9px;margin-bottom:14px}
+  .hero-logo{height:66px;width:auto}@media(max-width:600px){.hero-logo{height:46px}}
+  .hero-ed{font-size:1.06rem;font-weight:800;color:var(--slate);letter-spacing:.02em}
+  .shero h1.st{margin-bottom:16px}
+  .shero .lead{max-width:720px;margin:0 auto}
+  .facts{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;margin:26px 0 6px}
+  .facts div b{display:block;font-size:1.4rem;font-weight:800;color:var(--blue);line-height:1.1}
+  .facts div span{font-size:.82rem;color:var(--slate)}
+  .csec{margin-top:10px}
+  .csec .second{display:block;margin-top:12px;font-weight:700;color:var(--blue);font-size:.95rem}
+  .strip{margin-top:28px;width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .strip-track{display:flex;gap:16px;width:max-content;animation:stripL 80s linear infinite}
+  .strip-track img{height:210px;width:auto;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(21,23,28,.12);background:#eef2f5}
+  @media(max-width:700px){.strip-track img{height:140px}}
+  .strip:hover .strip-track{animation-play-state:paused}
+  @keyframes stripL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.strip-track{animation:none}}
+  .wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px;align-items:start}
+  @media(max-width:820px){.wgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.wgrid{grid-template-columns:1fr}}
+  .wcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;text-align:left}
+  .wic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;color:#fff;font-size:1.2rem;margin-bottom:13px}
+  .wcard h3{font-size:1.1rem;font-weight:800;letter-spacing:-.01em;margin:0 0 6px;color:var(--ink)}
+  .wcard p{font-size:.94rem;color:var(--slate);line-height:1.55;margin:0}
+  .twoways{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  @media(max-width:700px){.twoways{grid-template-columns:1fr}}
+  .way{position:relative;border-radius:18px;overflow:hidden;color:#fff;padding:30px;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end}
+  .way.v{background:linear-gradient(135deg,#1f4fd0,#16357f)}
+  .way.a{background:linear-gradient(135deg,#f4b740,#e0902a)}
+  .way.a *{color:#15171c}
+  .way .wk{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;opacity:.85}
+  .way h3{font-size:1.6rem;font-weight:800;letter-spacing:-.01em;margin:4px 0 8px;line-height:1.05}
+  .way p{font-size:.97rem;line-height:1.5;opacity:.95;margin:0}
+  .flow3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px}
+  @media(max-width:700px){.flow3{grid-template-columns:1fr}}
+  .f3{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;text-align:left}
+  .f3 .n{width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:11px}
+  .f3 h4{font-size:1.02rem;font-weight:800;margin:0 0 5px}
+  .f3 p{font-size:.92rem;color:var(--slate);line-height:1.5;margin:0}
+  .f3 a{color:var(--blue);font-weight:700;text-decoration:none}
+  .flownote{font-size:.86rem;color:var(--slate);line-height:1.6;max-width:760px;margin:16px auto 0;text-align:center}
+  .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+  @media(max-width:760px){.tgrid{grid-template-columns:1fr}}
+  .tq{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+  .tq .mark{font-size:2.6rem;color:var(--gold);line-height:.5;font-weight:800;height:22px}
+  .tq blockquote{font-size:1.05rem;line-height:1.55;color:var(--ink);margin:10px 0 18px;font-weight:500;flex:1}
+  .tq .who{display:flex;align-items:center;gap:12px}
+  .tq .who img,.tq .who .ini{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:0 0 52px;background:#eef2f5}
+  .tq .ini{display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.05rem}
+  .tq .who b{display:block;font-size:.95rem;color:var(--ink)}
+  .tq .who span{font-size:.81rem;color:var(--slate);display:block}
+  .scasewrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  @media(max-width:760px){.scasewrap{grid-template-columns:1fr}}
+  .scase{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:block;color:inherit;transition:transform .16s,box-shadow .16s}
+  .scase:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .scase .th{aspect-ratio:16/9;position:relative;background:#0c1622;overflow:hidden}
+  .scase .th img{width:100%;height:100%;object-fit:cover;display:block}
+  .scase .pl{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+  .scase .pl svg{width:56px;height:56px}
+  .scase .b{padding:17px}
+  .scase .loc{font-size:.74rem;color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+  .scase .b h4{font-size:1.04rem;font-weight:800;margin:0 0 6px;letter-spacing:-.01em}
+  .scase .b p{font-size:.9rem;color:var(--slate);line-height:1.5;margin:0}
+  .egrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+  @media(max-width:820px){.egrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.egrid{grid-template-columns:1fr}}
+  .ecard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 18px;text-align:center}
+  .ecard img{width:66px;height:66px;border-radius:50%;object-fit:cover;margin:0 auto 11px;display:block;background:#eef2f5}
+  .ecard p{font-size:.86rem;color:var(--ink);line-height:1.46;margin:0 0 11px}
+  .ecard b{display:block;font-size:.87rem;color:var(--ink);font-weight:800}
+  .ecard span{font-size:.73rem;color:var(--slate);line-height:1.3;display:block;margin-top:2px}
+  .more-end{margin-top:18px;text-align:center}
+  .more-end summary{cursor:pointer;display:inline-block;font-weight:800;color:var(--blue);padding:10px 20px;border:1px solid var(--line);border-radius:999px;background:#fff;list-style:none}
+  .more-end summary::-webkit-details-marker{display:none}
+  .more-end[open] summary{display:none}
+  .faq{max-width:780px;margin:26px auto 0}
+  .faq details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+  .faq summary{cursor:pointer;padding:17px 20px;font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--ink)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.5rem;color:var(--blue);font-weight:400;line-height:1;flex:0 0 auto}
+  .faq details[open] summary::after{content:"\2013"}
+  .faq .a{padding:0 20px 17px;font-size:.94rem;color:var(--slate);line-height:1.62}
+  .faq .a a{color:var(--blue);font-weight:700}
+  .artwall{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+  @media(max-width:760px){.artwall{grid-template-columns:repeat(2,1fr)}}
+  .artwall a{display:block;aspect-ratio:3/4;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#eef2f5}
+  .artwall img{width:100%;height:100%;object-fit:cover}
+  .reslist{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .opennow{display:inline-block;background:#1f8a5b;color:#fff;font-weight:800;font-size:.78rem;padding:6px 14px;border-radius:999px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+  .datelist{list-style:none;max-width:680px;margin:14px auto 0}
+  .datelist li{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid var(--line);padding:13px 0}
+  .datelist .dt{font-weight:800;color:var(--blue);min-width:150px}
+  .submit-box{background:var(--cloud);border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:18px;font-size:1rem;line-height:1.7}
+</style>
+</head>
+<body id="top">
+
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="/"><img class="brandlogo" src="assets/bekindbecool_logo.png" alt="#BeKindBeCool"><small class="brandsub">School Edition</small></a>
+  <nav class="nav-links">
+    <a href="/">Main awards site</a><a href="#why">Why join</a><a href="#how">How it works</a><a href="#proof">Stories</a><a href="#faq">FAQ</a>
+    <a class="btn btn-primary" href="teachers-guide.pdf" target="_blank" rel="noopener">Download the guide</a>
+  </nav>
+</div></header>
+
+<!-- HERO -->
+<section class="shero" id="hero">
+  <div class="wrap center">
+    <div class="hero-brand"><img class="hero-logo" src="assets/bekindbecool_logo.png" alt="#BeKindBeCool"><span class="hero-ed">School Edition · 2026–27</span></div>
+    <h1 class="st">Bring kindness to your classroom</h1>
+    <p class="lead">A <strong>free</strong>, ready-to-run project for <strong>grades 1–12</strong>. In as little as <strong>one 45-minute lesson</strong>, your students share an act of kindness — and the best work is celebrated on the <strong>Times Square billboard</strong> in NYC.</p>
+  </div>
+  <div class="strip"><div class="strip-track"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/8a/a9/65/8aa965be-2155-40c7-9fa8-fa0662d8a461/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/a4/8d/c9/a48dc902-a40c-4b5c-958f-59a3e380308e/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/9e/15/31/9e153199-1cc8-4f00-ab7a-6044f933906d/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/19/19/0b/19190b91-6f8a-4160-888d-b9a1761908a5/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/b6/5d/17/b65d17d2-1e0c-4782-ad02-cfdfe0b18fb7/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ca/d7/0b/cad70b10-5557-49c2-9e87-0caafba9c865/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ac/46/3d/ac463d1d-e0ed-48d5-a645-c63230f5769a/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/d2/d9/01/d2d90134-1efd-4ee3-858e-e16a3acfdc39/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/9c/c5/ce/9cc5ce07-6244-426f-b6b6-0a597154c01d/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/69/04/ec/6904ec90-6f43-4015-bd1e-3ebf9525d00c/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/b8/59/dc/b859dcaf-9ab6-495a-bf6e-7f52d23db9ad/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/1a/b1/11/1ab1111b-47f4-437a-8391-9501e78c0034/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ab/59/9b/ab599b34-41b1-4e77-86fd-5ccf4b3e26ab/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/be/e0/11/bee01128-89b7-40a1-aeb2-7fd92e09035c/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/39/93/ce/3993ce9f-5a57-4e40-80ba-cb3856faf230/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/cd/dc/1c/cddc1ca9-146f-47c4-bc3e-1fb758605d9a/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/cc/fb/f3/ccfbf35a-f740-4437-aa6b-4b883ec8f02f/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/f6/7b/d2/f67bd216-de31-4211-8bac-14d00d2a5d95/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ae/39/40/ae394059-f228-4c71-a124-5ab5892ca2f6/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/f4/f4/37/f4f437e0-9911-4db5-90ab-ccb0caa3029d/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ed/07/cb/ed07cb6c-7633-438f-b5d7-ee3b96e81955/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/be/17/c1/be17c1e4-cb4b-434d-adc1-ac971f12cf4a/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/02/76/fe/0276fe78-981f-450b-aea6-056f2170e517/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/24/b5/c3/24b5c307-106a-46de-98e6-3d5cb721131e/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/82/c9/26/82c92675-6bc3-44e7-9f9b-a2ac784050d4/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/c5/a5/c5/c5a5c500-5085-43bc-b501-2b4e198c7301/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/53/ad/f5/53adf589-85bb-4a1e-9d13-ab177aa50bc7/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/e6/1f/21/e61f2146-6fae-44fd-b581-8290367a6444/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/2f/93/83/2f9383f0-6acf-4498-88a5-4db84e4bc6ea/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/2f/0d/20/2f0d209d-fec9-46f2-a89a-a00e95aa6238/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/55/89/27/558927fd-175d-45f3-b9a7-efc8b2c080d6/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/5a/40/2f/5a402f7c-269e-4d58-afbf-e08c8553ffd9/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ef/42/96/ef4296bd-4c36-4d25-aabc-bf5734ff5a1c/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/34/7a/f1/347af16c-4072-4a70-8f08-a75340b9e3a2/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/bf/52/e0/bf52e033-1b7e-4d67-bc76-482541ffa98e/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/64/c9/e0/64c9e01f-4dad-4376-84c8-97a1524aa420/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/06/be/cc/06becc21-ee54-4050-8f5f-24e0b2fbc9ed/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/67/f5/25/67f52577-2199-47f5-9b0b-d9d7da0fdf75/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/8a/a9/65/8aa965be-2155-40c7-9fa8-fa0662d8a461/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/a4/8d/c9/a48dc902-a40c-4b5c-958f-59a3e380308e/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/9e/15/31/9e153199-1cc8-4f00-ab7a-6044f933906d/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/19/19/0b/19190b91-6f8a-4160-888d-b9a1761908a5/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/b6/5d/17/b65d17d2-1e0c-4782-ad02-cfdfe0b18fb7/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ca/d7/0b/cad70b10-5557-49c2-9e87-0caafba9c865/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ac/46/3d/ac463d1d-e0ed-48d5-a645-c63230f5769a/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/d2/d9/01/d2d90134-1efd-4ee3-858e-e16a3acfdc39/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/9c/c5/ce/9cc5ce07-6244-426f-b6b6-0a597154c01d/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/69/04/ec/6904ec90-6f43-4015-bd1e-3ebf9525d00c/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/b8/59/dc/b859dcaf-9ab6-495a-bf6e-7f52d23db9ad/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/1a/b1/11/1ab1111b-47f4-437a-8391-9501e78c0034/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ab/59/9b/ab599b34-41b1-4e77-86fd-5ccf4b3e26ab/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/be/e0/11/bee01128-89b7-40a1-aeb2-7fd92e09035c/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/39/93/ce/3993ce9f-5a57-4e40-80ba-cb3856faf230/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/cd/dc/1c/cddc1ca9-146f-47c4-bc3e-1fb758605d9a/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/cc/fb/f3/ccfbf35a-f740-4437-aa6b-4b883ec8f02f/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/f6/7b/d2/f67bd216-de31-4211-8bac-14d00d2a5d95/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ae/39/40/ae394059-f228-4c71-a124-5ab5892ca2f6/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/f4/f4/37/f4f437e0-9911-4db5-90ab-ccb0caa3029d/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ed/07/cb/ed07cb6c-7633-438f-b5d7-ee3b96e81955/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/be/17/c1/be17c1e4-cb4b-434d-adc1-ac971f12cf4a/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/02/76/fe/0276fe78-981f-450b-aea6-056f2170e517/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/24/b5/c3/24b5c307-106a-46de-98e6-3d5cb721131e/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/82/c9/26/82c92675-6bc3-44e7-9f9b-a2ac784050d4/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/c5/a5/c5/c5a5c500-5085-43bc-b501-2b4e198c7301/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/53/ad/f5/53adf589-85bb-4a1e-9d13-ab177aa50bc7/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/e6/1f/21/e61f2146-6fae-44fd-b581-8290367a6444/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/2f/93/83/2f9383f0-6acf-4498-88a5-4db84e4bc6ea/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/2f/0d/20/2f0d209d-fec9-46f2-a89a-a00e95aa6238/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/55/89/27/558927fd-175d-45f3-b9a7-efc8b2c080d6/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/5a/40/2f/5a402f7c-269e-4d58-afbf-e08c8553ffd9/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ef/42/96/ef4296bd-4c36-4d25-aabc-bf5734ff5a1c/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/34/7a/f1/347af16c-4072-4a70-8f08-a75340b9e3a2/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/bf/52/e0/bf52e033-1b7e-4d67-bc76-482541ffa98e/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/64/c9/e0/64c9e01f-4dad-4376-84c8-97a1524aa420/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/06/be/cc/06becc21-ee54-4050-8f5f-24e0b2fbc9ed/672.webp" alt=""><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/67/f5/25/67f52577-2199-47f5-9b0b-d9d7da0fdf75/672.webp" alt=""></div></div>
+  <div class="wrap center">
+    <div class="facts">
+      <div><b>Free</b><span>no cost to take part</span></div>
+      <div><b>Grades 1–12</b><span>individuals or whole class</span></div>
+      <div><b>One lesson</b><span>to get started</span></div>
+      <div><b>$500 ×4</b><span>art first prizes</span></div>
+    </div>
+    <div class="csec">
+      <a class="btn btn-primary" href="teachers-guide.pdf" target="_blank" rel="noopener">Download the free Teacher's Guide →</a>
+      <a class="second" href="#how">or see how it works ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" style="background:var(--cloud)"><div class="wrap">
+  <div class="center"><h2 class="st">Why bring it to your school</h2><p class="sub">More than a contest — a simple, uplifting project that builds character and community.</p></div>
+  <div class="wgrid">
+    <div class="wcard"><div class="wic" style="background:#1f4fd0">♥</div><h3>Builds empathy</h3><p>Students reflect on real acts of kindness — a natural fit for social-emotional learning.</p></div>
+    <div class="wcard"><div class="wic" style="background:#f4b740;color:#15171c">★</div><h3>Anti-bullying culture</h3><p>A shared, positive project the whole class can rally around, reinforcing respect and inclusion.</p></div>
+    <div class="wcard"><div class="wic" style="background:#7b5cff">⏱</div><h3>Easy to run — one lesson</h3><p>Run it in a single 45-minute lesson or stretch it across a unit. The guide gives you everything.</p></div>
+    <div class="wcard"><div class="wic" style="background:#1f8a5b">◎</div><h3>Real recognition</h3><p>Winning work can light up the Times Square billboard, with certificates for students, teachers &amp; schools.</p></div>
+  </div>
+</div></section>
+
+<!-- TWO WAYS -->
+<section id="ways"><div class="wrap">
+  <div class="center"><h2 class="st">Two ways to take part</h2><p class="sub">Pick one or do both — every entry uses the hashtag #BeKindBeCool.</p></div>
+  <div class="twoways">
+    <div class="way v"><div class="wk">Option 1</div><h3>Kindness Videos</h3><p>Class projects, skits, and student films that bring kindness to campus and help counter bullying.</p></div>
+    <div class="way a"><div class="wk">Option 2</div><h3>Kindness Art Competition</h3><p>Students illustrate “Acts of Kindness — Big or Small” in any 2D medium, judged across four grade divisions.</p></div>
+  </div>
+</div></section>
+
+<!-- HOW IT WORKS + SUBMISSION -->
+<section id="how" style="background:var(--cloud)"><div class="wrap center">
+  <h2 class="st">How to run it in class</h2>
+  <p class="sub">Four simple steps — full prompts and lesson ideas are in the Teacher's Guide.</p>
+</div>
+<div class="wrap" style="margin-top:24px">
+  <div class="enter-card">
+  <div class="hiw">
+    <div class="hiw-step"><div class="hiw-ic" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h4>1. Introduce</h4><p>Discuss what kindness means, using the guide's prompts.</p></div>
+    <div class="hiw-arrow">→</div>
+    <div class="hiw-step"><div class="hiw-ic" style="background:#f59e0b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="10" r="1"/><circle cx="12" cy="8" r="1"/><circle cx="15.5" cy="10" r="1"/></svg></div><h4>2. Create</h4><p>Students make a video or artwork about an act of kindness.</p></div>
+    <div class="hiw-arrow">→</div>
+    <div class="hiw-step"><div class="hiw-ic" style="background:#1f8a5b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"/><path d="M7 9l5-5 5 5"/><path d="M5 20h14"/></svg></div><h4>3. Submit</h4><p>One form for the class — see the three steps below.</p></div>
+    <div class="hiw-arrow">→</div>
+    <div class="hiw-step"><div class="hiw-ic" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.5 4.5"/><path d="M16 6h2.5a2.5 2.5 0 0 1-2.5 4.5"/><path d="M12 12v3"/><path d="M9.5 20h5l-.7-3h-3.6l-.7 3z"/></svg></div><h4>4. Celebrate</h4><p>Winners are featured on the Times Square billboard.</p></div>
+  </div>
+  </div>
+</div>
+<div class="wrap" style="margin-top:30px">
+  <div class="center"><h3 class="st" style="font-size:clamp(1.4rem,3vw,2rem)">Submitting takes 3 steps</h3></div>
+  <div class="flow3">
+    <div class="f3"><div class="n">1</div><h4>Fill the entry form</h4><p>One short form per student — or one for your whole class. A parent/guardian signature is built in. <a href="https://gjw.us/artentryform" target="_blank" rel="noopener">Get the form →</a></p></div>
+    <div class="f3"><div class="n">2</div><h4>Add the work</h4><p>Attach the artwork photo or paste the video link. For art, label it with the student's initials and the school, studio, or group name.</p></div>
+    <div class="f3"><div class="n">3</div><h4>We celebrate it</h4><p>The best entries appear on the Times Square billboard, with certificates for everyone.</p></div>
+  </div>
+  <p class="flownote">A teacher can submit on behalf of the whole class in one batch. Prefer email or post? Send to <strong>creators@ganjingworld.com</strong> or 33 Fulton St, Middletown, NY 10940. For anything shared publicly, use student initials.</p>
+  <div class="center" style="margin-top:22px"><a class="btn btn-primary" href="teachers-guide.pdf" target="_blank" rel="noopener">Download the free Teacher's Guide →</a></div>
+</div></section>
+
+<!-- TESTIMONIALS -->
+<section id="proof"><div class="wrap">
+  <div class="center"><h2 class="st">What educators &amp; families say</h2><p class="sub">Voices from classrooms that have already brought #BeKindBeCool to their students.</p></div>
+  <div class="tgrid">
+    <div class="tq"><div class="mark">&ldquo;</div><blockquote>It’s a gift for the classroom. Kindness really resonated for them — it changed the whole dynamic. We want to do more of it, and it should be worked into all of our classes.</blockquote><div class="who"><span class="ini" style="background:linear-gradient(135deg,#1f4fd0,#5a7fe0)">JG</span><div><b>Judy Gatlin</b><span>Elementary school teacher</span></div></div></div>
+    <div class="tq"><div class="mark">&ldquo;</div><blockquote>The kids loved writing essays and joining the challenge. If they’re doing this at age 9 — imagine them at 29 or 39, with the world in their hands. This is our future.</blockquote><div class="who"><img loading="lazy" src="assets/endorse/e05.png" alt="Larissa Bankovsky"><div><b>Larissa Bankovsky</b><span>Principal &amp; founder, Star Academy for the Gifted and Talented</span></div></div></div>
+    <div class="tq"><div class="mark">&ldquo;</div><blockquote>More kind content, promote kindness — and our kids grow up kinder. It puts the seeds into their minds, and that’s what will grow.</blockquote><div class="who"><span class="ini" style="background:linear-gradient(135deg,#ff5234,#ff7a5c)">IR</span><div><b>Irina Ratskovskaya</b><span>Parent, Boston</span></div></div></div>
+    <div class="tq"><div class="mark">&ldquo;</div><blockquote>Suffering is an illness… and the medicine for it is kindness.</blockquote><div class="who"><span class="ini" style="background:linear-gradient(135deg,#1f8a5b,#3fbf86)">★</span><div><b>A participating student</b><span>Kindness Is Cool Awards</span></div></div></div>
+  </div>
+</div></section>
+
+<!-- SCHOOLS IN ACTION -->
+<section id="cases" style="background:var(--cloud)"><div class="wrap">
+  <div class="center"><h2 class="st">Schools in action</h2><p class="sub">From New England to Indonesia and Vietnam — whole schools have made kindness their project.</p></div>
+  <div class="scasewrap">
+    <a class="scase" href="https://www.ganjingworld.com/video/1haik1t4t574nDhhHTIIxRbdI1o01c" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/64/db/fc/64dbfc8c-70f3-43d2-b352-781563cd52d4/1280.webp" alt="Lumen Academy"><span class="pl"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="31" fill="rgba(244,183,64,.96)"/><path d="M26 21l20 11-20 11z" fill="#15171c"/></svg></span></div><div class="b"><div class="loc">Waltham, MA · USA</div><h4>Lumen Academy</h4><p>Pre-K to Grade 8 students created essays and videos under a “kindness umbrella,” building an empathy-driven culture.</p></div></a>
+    <a class="scase" href="https://www.ganjingworld.com/video/1h99kuk0fid19q8JCJykIIEGe1391c" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/02/e8/cb/02e8cb57-ffcd-4396-9713-30673f9c5346/1280.webp" alt="SMPN 29 Batam"><span class="pl"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="31" fill="rgba(244,183,64,.96)"/><path d="M26 21l20 11-20 11z" fill="#15171c"/></svg></span></div><div class="b"><div class="loc">Batam · Indonesia</div><h4>SMPN 29 Batam</h4><p>951 students and 32 teachers fused creativity and kindness, raising compassionate future leaders.</p></div></a>
+    <a class="scase" href="https://www.ganjingworld.com/video/1hac07n1rr61ahuGV64Acd8HK10v1c" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v1/5a/f4/ac/5af4acd2-873f-4a17-8f5e-d75bf607c4b6/1280.webp" alt="Ho Chi Minh University"><span class="pl"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="31" fill="rgba(244,183,64,.96)"/><path d="M26 21l20 11-20 11z" fill="#15171c"/></svg></span></div><div class="b"><div class="loc">Ho Chi Minh City · Vietnam</div><h4>Ho Chi Minh University</h4><p>200 freshmen crafted 55 short films — each a bold step toward uplifting their world.</p></div></a>
+  </div>
+</div></section>
+
+<!-- ENDORSEMENTS -->
+<section id="endorsements"><div class="wrap">
+  <div class="center"><h2 class="st">Endorsed by leaders &amp; educators</h2><p class="sub">Teachers and principals worldwide — and leaders across the U.S. — stand behind the movement.</p></div>
+  <div class="egrid">
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e04.png" alt="Leejun Taylor"><p>“Give it a try and you’ll love it — it’s free, easy and safe for the classroom!”</p><b>Leejun Taylor</b><span>Teacher, BH-BL Central School District</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e07.png" alt="Adel Mansilla"><p>“It empowers students not only socially, but academically — no matter the age.”</p><b>Adel Mansilla</b><span>Teacher, Boston, USA</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e06.png" alt="Laurence J. Lefebvre"><p>“It’s a great gift for teachers. I hope other schools have this positive experience!”</p><b>Laurence J. Lefebvre</b><span>Teacher, École Jean Jaurès, France</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e12.png" alt="Sibylle Schneller"><p>“The impact of kindness on my students has been undeniably positive.”</p><b>Sibylle Schneller</b><span>Teacher, Switzerland</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e11.png" alt="Yali Zheng"><p>“I host classroom events and curate resources, encouraging students to take part regularly.”</p><b>Yali Zheng</b><span>Mentor Teacher, Hsinchu, Taiwan</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e13.png" alt="Mrs. Soimah"><p>“Our students stay free from negative things — it’s beneficial to their development.”</p><b>Mrs. Soimah</b><span>Principal, SMP Harapan Utama Batam</span></div>
+  </div>
+  <details class="more-end">
+    <summary>Show all endorsements →</summary>
+    <div class="egrid">
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e01.png" alt="John Quiñones"><p>“We have to help each other — you never know when you’ll be the one who needs that help.”</p><b>John Quiñones</b><span>ABC News journalist &amp; host</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e03.png" alt="James Skoufis"><p>“At a time when there’s so much division, we need more kindness, love and thoughtfulness.”</p><b>James Skoufis</b><span>New York State Senator</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e02.png" alt="Lester Chang"><p>“I’m grateful there’s finally wholesome, family-friendly content for our kids.”</p><b>Lester Chang</b><span>NY State Assembly (R-Brooklyn)</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e10.png" alt="Devlin Robinson"><p>“It paved the path through technology and innovation for a positive digital community.”</p><b>Devlin Robinson</b><span>State Senator</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e08.png" alt="Dr. Kristine Young"><p>“Kindness and compassion go hand in hand. Go out and do something kind today.”</p><b>Dr. Kristine Young</b><span>President, SUNY Orange</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e09.png" alt="Kyle Kemper"><p>“What the world needs is access to safe, clean, non-addictive social media.”</p><b>Kyle Kemper</b><span>Campaign manager &amp; advocate</span></div>
+    </div>
+  </details>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--cloud)"><div class="wrap">
+  <div class="center"><h2 class="st">Questions teachers ask</h2><p class="sub">Everything you need to feel confident bringing it to your students.</p></div>
+  <div class="faq">
+    <details><summary>Do I need parental permission?</summary><div class="a">Yes — one parent/guardian signature per student, built right into the entry form (we provide a ready-to-print version). A teacher can collect them and submit for the whole class in one batch.</div></details>
+    <details><summary>Is it safe and private for students?</summary><div class="a">Gan Jing World is built for family safety, with a dedicated Kids platform and non-addictive design. You decide what is shared, and we recommend using student initials for anything posted publicly.</div></details>
+    <details><summary>Does my class need art or video skills?</summary><div class="a">No. It’s about the idea, not the polish — any 2D medium or a simple phone video works, at any level. There’s no wrong way to show kindness.</div></details>
+    <details><summary>Can the whole class take part together?</summary><div class="a">Yes. Enter as individuals, a class, or a whole school. A single teacher can submit on everyone’s behalf, so it stays manageable.</div></details>
+    <details><summary>How are entries judged?</summary><div class="a">Art is judged on the kindness message, creativity, and artistic skill, across four grade divisions — 1–3, 4–6, 7–9, and 10–12 — so students compete with their own age group. Every art entry must include the student's initials and the school, studio, or group name to be judged. (Kindness Videos compete in the Open Awards, scored on creativity and engagement.)</div></details>
+    <details><summary>How much time does it take, and what does it cost?</summary><div class="a">As little as one 45-minute lesson, and it’s completely free. Full lesson prompts, examples, and printables are in the <a href="teachers-guide.pdf" target="_blank" rel="noopener">Teacher’s Guide</a>.</div></details>
+    <details><summary>When is the deadline?</summary><div class="a">Submissions are open now through <strong>March 31, 2027</strong>. The earlier you enter, the longer your students’ work is showcased leading up to the Times Square celebration.</div></details>
+  </div>
+</div></section>
+
+<!-- PRIZES -->
+<section id="prizes"><div class="wrap">
+  <div class="center"><h2 class="st">Prizes &amp; recognition</h2><p class="sub">For students, teachers, and schools.</p></div>
+  <ul class="plist" style="max-width:760px;margin:24px auto 0;list-style:none">
+    <li><span class="pname">🎨 Art First Prize — one per grade division (1–3, 4–6, 7–9, 10–12)</span><b>$500 ×4</b></li>
+    <li><span class="pname">🎓 Excellence Awards — up to 10 students per division</span><b>1-yr Gan Jing Kids ($88)</b></li>
+    <li><span class="pname">🗽 Selected artwork on the Times Square billboard</span><b>Showcase</b></li>
+    <li><span class="pname">🖼️ Public art exhibition of selected works</span><b>Exhibition</b></li>
+    <li><span class="pname">📜 Kindness certificates — students, teachers &amp; schools</span><b>Recognition</b></li>
+  </ul>
+</div></section>
+
+<!-- ARTWORK + PARTICIPATING SCHOOLS -->
+<section id="artwork" style="background:var(--cloud)"><div class="wrap">
+  <div class="center"><h2 class="st">Last year's student artwork</h2><p class="sub">A glimpse of the creativity from #BeKindBeCool young artists.</p></div>
+  <div class="artwall">
+      <a href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/8a/a9/65/8aa965be-2155-40c7-9fa8-fa0662d8a461/672.webp" alt="Student artwork"></a>
+      <a href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/a4/8d/c9/a48dc902-a40c-4b5c-958f-59a3e380308e/672.webp" alt="Student artwork"></a>
+      <a href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/9e/15/31/9e153199-1cc8-4f00-ab7a-6044f933906d/672.webp" alt="Student artwork"></a>
+      <a href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/19/19/0b/19190b91-6f8a-4160-888d-b9a1761908a5/672.webp" alt="Student artwork"></a>
+      <a href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/b6/5d/17/b65d17d2-1e0c-4782-ad02-cfdfe0b18fb7/672.webp" alt="Student artwork"></a>
+      <a href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ca/d7/0b/cad70b10-5557-49c2-9e87-0caafba9c865/672.webp" alt="Student artwork"></a>
+      <a href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/ac/46/3d/ac463d1d-e0ed-48d5-a645-c63230f5769a/672.webp" alt="Student artwork"></a>
+      <a href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener"><img loading="lazy" src="https://image1-us-east.cloudokyo.cloud/image/v14/d2/d9/01/d2d90134-1efd-4ee3-858e-e16a3acfdc39/672.webp" alt="Student artwork"></a>
+  </div>
+  <div class="center" style="margin-top:18px"><a class="seeall" href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener">See all the winning artwork on Gan Jing World →</a></div>
+</div></section>
+
+<section id="schools"><div class="wrap center">
+  <h2 class="st">Schools already taking part</h2>
+  <p class="sub">Classrooms across New York, New Jersey, and beyond have joined the movement.</p>
+</div>
+<div class="marquee" style="margin-top:24px"><div class="mtrack" id="schooltrack"></div></div>
+</section>
+
+<!-- KEY DATES -->
+<section id="dates" style="background:var(--cloud)"><div class="wrap center">
+  <span class="opennow">● Open now</span>
+  <h2 class="st">Key dates · 2026–27</h2>
+  <p class="sub">The earlier you enter, the longer your students’ work is showcased.</p>
+  <ul class="datelist">
+    <li><span class="dt">June 16, 2026</span><span>Submissions open — start anytime</span></li>
+    <li><span class="dt">March 31, 2027</span><span>Final deadline for all entries</span></li>
+    <li><span class="dt">Spring 2027</span><span>Winners announced on Gan Jing World Stories</span></li>
+    <li><span class="dt">Summer 2027</span><span>Times Square celebration &amp; awards, NYC</span></li>
+  </ul>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-band"><div class="wrap center">
+  <h2 style="color:var(--ink)">Ready to bring kindness to your classroom?</h2>
+  <p class="sub" style="margin-top:8px">Free, and you can start in a single lesson.</p>
+  <div class="csec" style="margin-top:14px">
+    <a class="btn btn-primary" href="teachers-guide.pdf" target="_blank" rel="noopener">Download the free Teacher's Guide →</a>
+    <a class="second" href="https://gjw.us/artentryform" target="_blank" rel="noopener">or get the entry form</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-top">
+    <a class="brand" href="/"><span style="color:#fff;font-weight:800;font-size:1.05rem">#BeKindBeCool</span><small style="display:block;color:rgba(255,255,255,.78);font-weight:600">School Edition · Gan Jing World</small></a>
+    <nav class="foot-links">
+      <a href="/">Main awards site</a>
+      <a href="https://gjw.us/artentryform" target="_blank" rel="noopener">Entry form</a>
+      <a href="mailto:creators@ganjingworld.com">Contact</a>
+    </nav>
+  </div>
+  <div class="copy">© 2026 Gan Jing World · Kindness Awards · Technology for Humanity</div>
+</div></footer>
+
+<script>
+  var cpal=["#1f4fd0,#5a7fe0","#ff5234,#ff7a5c","#15171c,#33373f","#3a3f47,#5a616b"];
+  var schools=[["McKinley Elementary","MK"],["Roosevelt School","RS"],["Skano Elementary","SK"],["Vera Art Studio","VA"],["Jotham W. Wakeman No. 6","JW"],["High School of the Arts","HA"],["DCES","DCES"],["Ann Street School","AS"],["SFMS","SFMS"],["Challenger School","CH"],["BHBL O'Rourke Middle School","BO"],["BHBL High School","BH"],["Lakewood Middle School","LM"],["Northern Academy of the Arts","NA"]];
+  (function(){var el=document.getElementById("schooltrack");if(!el)return;var h="";for(var l=0;l<2;l++){schools.forEach(function(s,i){var cls=s[1].length>2?" sm":"";h+='<div class="creator school"><span class="avatar'+cls+'" style="background:linear-gradient(135deg,'+cpal[i%cpal.length]+')">'+s[1]+'</span><div class="cn">'+s[0]+'</div></div>';});}el.innerHTML=h;})();
+</script>
+</body>
+</html>
