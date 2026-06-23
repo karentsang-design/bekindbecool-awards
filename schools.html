@@ -456,15 +456,24 @@
   .wcard p{font-size:.94rem;color:var(--slate);line-height:1.55;margin:0}
   .twoways{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
   @media(max-width:700px){.twoways{grid-template-columns:1fr}}
-  .way{position:relative;border-radius:18px;overflow:hidden;color:#fff;padding:30px;min-height:248px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none}
+  .way{display:block;border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line);text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+  .way:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#dfe2e7}
+  .way .wmedia{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0c1622}
   .way .wbg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .35s ease}
-  .way:hover .wbg{transform:scale(1.05)}
-  .way::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,16,30,.08) 26%,rgba(10,16,30,.85) 100%)}
-  .way>*{position:relative;z-index:2}
-  .way .play{position:absolute;top:16px;left:16px;z-index:2;width:48px;height:48px;filter:drop-shadow(0 2px 7px rgba(0,0,0,.5))}
-  .way .wk{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;opacity:.92}
-  .way h3{font-size:1.6rem;font-weight:800;letter-spacing:-.01em;margin:4px 0 8px;line-height:1.05;color:#fff}
-  .way p{font-size:.97rem;line-height:1.5;margin:0;color:rgba(255,255,255,.95)}
+  .way:hover .wbg{transform:scale(1.04)}
+  .way .play{position:absolute;inset:0;margin:auto;width:54px;height:54px;filter:drop-shadow(0 2px 7px rgba(0,0,0,.5))}
+  .way .wbody{padding:22px 24px 26px}
+  .way .wk{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}
+  .way h3{font-size:1.5rem;font-weight:800;letter-spacing:-.01em;margin:6px 0 8px;line-height:1.05;color:var(--ink)}
+  .way p{font-size:.97rem;line-height:1.5;margin:0;color:var(--slate)}
+  /* timeline (how to run it) */
+  .tl{max-width:720px;margin:30px auto 0;position:relative;text-align:left}
+  .tl:before{content:"";position:absolute;left:18px;top:8px;bottom:8px;width:2px;background:var(--line)}
+  .tli{position:relative;padding:0 0 28px 56px}
+  .tli:last-child{padding-bottom:0}
+  .tli .d{position:absolute;left:7px;top:-1px;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:.78rem;display:grid;place-items:center;box-shadow:0 0 0 5px var(--cloud)}
+  .tli h4{font-size:1.12rem;font-weight:800;margin:0 0 4px;letter-spacing:-.01em;color:var(--ink)}
+  .tli p{font-size:.96rem;color:var(--slate);line-height:1.55;margin:0}
   .flow3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px}
   @media(max-width:700px){.flow3{grid-template-columns:1fr}}
   .f3{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;text-align:left}
@@ -549,7 +558,6 @@
       <h1>Bring kindness to your classroom</h1>
       <p class="lead">A <strong>free</strong>, ready-to-run project for <strong>grades 1–12</strong>. In as little as <strong>one 45-minute lesson</strong>, your students share an act of kindness — and the best work is celebrated on the <strong>Times Square billboard</strong> in NYC.</p>
       <div class="facts">
-        <div><b>Free</b><span>no cost to take part</span></div>
         <div><b>Grades 1–12</b><span>individuals or whole class</span></div>
         <div><b>One lesson</b><span>to get started</span></div>
         <div><b>$500 ×4</b><span>art first prizes</span></div>
@@ -578,13 +586,12 @@
   <div class="center"><h2 class="st">Two ways to take part</h2><p class="sub">Pick one or do both — every entry uses the hashtag #BeKindBeCool.</p></div>
   <div class="twoways">
     <a class="way" href="https://www.ganjingworld.com/video/1haik1t4t574nDhhHTIIxRbdI1o01c" target="_blank" rel="noopener">
-      <div class="wbg" style="background-image:url('https://image1-us-west.cloudokyo.cloud/image/v1/64/db/fc/64dbfc8c-70f3-43d2-b352-781563cd52d4/1280.webp')"></div>
-      <span class="play"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="31" fill="rgba(255,255,255,.22)" stroke="#fff" stroke-width="2.5"/><path d="M26 21l20 11-20 11z" fill="#fff"/></svg></span>
-      <div class="wk">Option 1 · Watch an example</div><h3>Kindness Videos</h3><p>Class projects, skits, and student films — like Lumen Academy's — that bring kindness to campus and help counter bullying.</p>
+      <div class="wmedia"><div class="wbg" style="background-image:url('https://image1-us-west.cloudokyo.cloud/image/v1/64/db/fc/64dbfc8c-70f3-43d2-b352-781563cd52d4/1280.webp')"></div><span class="play"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="31" fill="rgba(255,255,255,.22)" stroke="#fff" stroke-width="2.5"/><path d="M26 21l20 11-20 11z" fill="#fff"/></svg></span></div>
+      <div class="wbody"><div class="wk">Option 1 · Watch an example</div><h3>Kindness Videos</h3><p>Class projects, skits, and student films — like Lumen Academy's — that bring kindness to campus and help counter bullying.</p></div>
     </a>
     <a class="way" href="https://www.ganjingworld.com/article/1iiunv7qqms5H5himiaTJnUdj1ar1c" target="_blank" rel="noopener">
-      <div class="wbg" style="background-image:url('https://image1-us-east.cloudokyo.cloud/image/v14/ca/d7/0b/cad70b10-5557-49c2-9e87-0caafba9c865/672.webp')"></div>
-      <div class="wk">Option 2 · See student art</div><h3>Kindness Art Competition</h3><p>Students illustrate “Acts of Kindness — Big or Small” in any 2D medium, judged across four grade divisions.</p>
+      <div class="wmedia"><div class="wbg" style="background-image:url('https://image1-us-east.cloudokyo.cloud/image/v14/ca/d7/0b/cad70b10-5557-49c2-9e87-0caafba9c865/672.webp')"></div></div>
+      <div class="wbody"><div class="wk">Option 2 · See student art</div><h3>Kindness Art Competition</h3><p>Students illustrate “Acts of Kindness — Big or Small” in any 2D medium, judged across four grade divisions.</p></div>
     </a>
   </div>
 </div></section>
@@ -594,17 +601,12 @@
   <h2 class="st">How to run it in class</h2>
   <p class="sub">Four simple steps — full prompts and lesson ideas are in the Teacher's Guide.</p>
 </div>
-<div class="wrap" style="margin-top:24px">
-  <div class="enter-card">
-  <div class="hiw">
-    <div class="hiw-step"><div class="hiw-ic" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h4>1. Introduce</h4><p>Discuss what kindness means, using the guide's prompts.</p></div>
-    <div class="hiw-arrow">→</div>
-    <div class="hiw-step"><div class="hiw-ic" style="background:#f59e0b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="10" r="1"/><circle cx="12" cy="8" r="1"/><circle cx="15.5" cy="10" r="1"/></svg></div><h4>2. Create</h4><p>Students make a video or artwork about an act of kindness.</p></div>
-    <div class="hiw-arrow">→</div>
-    <div class="hiw-step"><div class="hiw-ic" style="background:#1f8a5b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"/><path d="M7 9l5-5 5 5"/><path d="M5 20h14"/></svg></div><h4>3. Submit</h4><p>Fill one short form (parent/guardian signature included) and add the artwork or video link. <a href="https://gjw.us/artentryform" target="_blank" rel="noopener">Get the form →</a></p></div>
-    <div class="hiw-arrow">→</div>
-    <div class="hiw-step"><div class="hiw-ic" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.5 4.5"/><path d="M16 6h2.5a2.5 2.5 0 0 1-2.5 4.5"/><path d="M12 12v3"/><path d="M9.5 20h5l-.7-3h-3.6l-.7 3z"/></svg></div><h4>4. Celebrate</h4><p>Winners are featured on the Times Square billboard.</p></div>
-  </div>
+<div class="wrap">
+  <div class="tl">
+    <div class="tli"><div class="d">1</div><h4>Introduce</h4><p>Discuss what kindness means, using the guide's prompts.</p></div>
+    <div class="tli"><div class="d">2</div><h4>Create</h4><p>Students make a video or artwork about an act of kindness.</p></div>
+    <div class="tli"><div class="d">3</div><h4>Submit</h4><p>Fill one short form (parent/guardian signature included) and add the artwork or video link. <a href="https://gjw.us/artentryform" target="_blank" rel="noopener">Get the form →</a></p></div>
+    <div class="tli"><div class="d">4</div><h4>Celebrate</h4><p>Winners are featured on the Times Square billboard.</p></div>
   </div>
 </div>
 <div class="wrap" style="margin-top:24px">
@@ -615,23 +617,16 @@
 <!-- TESTIMONIALS -->
 <section id="proof"><div class="wrap">
   <div class="center"><h2 class="st">What educators &amp; families say</h2><p class="sub">Voices from classrooms that have already brought #BeKindBeCool to their students.</p></div>
-  <div class="tgrid">
-    <div class="tq"><div class="mark">&ldquo;</div><blockquote>It’s a gift for the classroom. Kindness really resonated for them — it changed the whole dynamic. We want to do more of it, and it should be worked into all of our classes.</blockquote><div class="who"><span class="ini" style="background:linear-gradient(135deg,#1f4fd0,#5a7fe0)">JG</span><div><b>Judy Gatlin</b><span>Elementary school teacher</span></div></div></div>
-    <div class="tq"><div class="mark">&ldquo;</div><blockquote>The kids loved writing essays and joining the challenge. If they’re doing this at age 9 — imagine them at 29 or 39, with the world in their hands. This is our future.</blockquote><div class="who"><img loading="lazy" src="assets/endorse/e05.png" alt="Larissa Bankovsky"><div><b>Larissa Bankovsky</b><span>Principal &amp; founder, Star Academy for the Gifted and Talented</span></div></div></div>
-    <div class="tq"><div class="mark">&ldquo;</div><blockquote>More kind content, promote kindness — and our kids grow up kinder. It puts the seeds into their minds, and that’s what will grow.</blockquote><div class="who"><span class="ini" style="background:linear-gradient(135deg,#ff5234,#ff7a5c)">IR</span><div><b>Irina Ratskovskaya</b><span>Parent, Boston</span></div></div></div>
-    <div class="tq"><div class="mark">&ldquo;</div><blockquote>Suffering is an illness… and the medicine for it is kindness.</blockquote><div class="who"><span class="ini" style="background:linear-gradient(135deg,#1f8a5b,#3fbf86)">★</span><div><b>A participating student</b><span>Kindness Is Cool Awards</span></div></div></div>
-  </div>
-  <details class="more-end">
-    <summary>Show all educator endorsements →</summary>
-    <div class="egrid">
+  <div class="egrid">
+    <div class="ecard"><img loading="lazy" src="assets/school_hero.webp" alt="Judy Gatlin's students" style="object-position:72% 42%"><p>“It’s a gift for the classroom — kindness really resonated and changed the whole dynamic.”</p><b>Judy Gatlin</b><span>Elementary school teacher</span></div>
+    <div class="ecard"><img loading="lazy" src="assets/endorse/e05.png" alt="Larissa Bankovsky"><p>“The kids loved it. If they’re doing this at age 9 — imagine them at 29, with the world in their hands.”</p><b>Larissa Bankovsky</b><span>Principal &amp; founder, Star Academy</span></div>
     <div class="ecard"><img loading="lazy" src="assets/endorse/e04.png" alt="Leejun Taylor"><p>“Give it a try and you’ll love it — it’s free, easy and safe for the classroom!”</p><b>Leejun Taylor</b><span>Teacher, BH-BL Central School District</span></div>
     <div class="ecard"><img loading="lazy" src="assets/endorse/e07.png" alt="Adel Mansilla"><p>“It empowers students not only socially, but academically — no matter the age.”</p><b>Adel Mansilla</b><span>Teacher, Boston, USA</span></div>
     <div class="ecard"><img loading="lazy" src="assets/endorse/e06.png" alt="Laurence J. Lefebvre"><p>“It’s a great gift for teachers. I hope other schools have this positive experience!”</p><b>Laurence J. Lefebvre</b><span>Teacher, École Jean Jaurès, France</span></div>
     <div class="ecard"><img loading="lazy" src="assets/endorse/e12.png" alt="Sibylle Schneller"><p>“The impact of kindness on my students has been undeniably positive.”</p><b>Sibylle Schneller</b><span>Teacher, Switzerland</span></div>
     <div class="ecard"><img loading="lazy" src="assets/endorse/e11.png" alt="Yali Zheng"><p>“I host classroom events and curate resources, encouraging students to take part regularly.”</p><b>Yali Zheng</b><span>Mentor Teacher, Hsinchu, Taiwan</span></div>
     <div class="ecard"><img loading="lazy" src="assets/endorse/e13.png" alt="Mrs. Soimah"><p>“Our students stay free from negative things — it’s beneficial to their development.”</p><b>Mrs. Soimah</b><span>Principal, SMP Harapan Utama Batam</span></div>
-    </div>
-  </details>
+  </div>
 </div></section>
 
 <!-- FAQ -->
