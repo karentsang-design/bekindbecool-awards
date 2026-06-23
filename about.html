@@ -482,9 +482,9 @@
   .wvc .s{font-weight:800;color:var(--ink);font-size:1.16rem;line-height:1.15;letter-spacing:-.01em}
   .wvc .s b{color:var(--coral)}
   .wvc p{font-size:.9rem;color:var(--slate);margin:5px 0 0;line-height:1.45}
-  .sstat{display:flex;gap:38px;justify-content:center;flex-wrap:wrap;margin:24px 0 4px}
-  .sstat div b{display:block;font-size:1.5rem;font-weight:800;color:var(--blue);line-height:1.05}
-  .sstat div span{font-size:.82rem;color:var(--slate)}
+  .sstat{display:flex;gap:clamp(30px,5vw,60px);justify-content:center;align-items:flex-start;flex-wrap:wrap;margin:34px 0 6px}
+  .sstat div b{display:block;font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:800;color:var(--blue);line-height:1;letter-spacing:-.025em}
+  .sstat div span{display:block;margin-top:7px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--slate)}
   .statband{background:var(--blue);color:#fff}
   .statgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;text-align:center}
   @media(max-width:760px){.statgrid{grid-template-columns:repeat(2,1fr)}}
