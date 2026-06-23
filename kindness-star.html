@@ -41,17 +41,17 @@
 
   /* NAV */
   header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px;position:relative}
   .brand{display:flex;align-items:center;gap:10px;font-weight:800}
   .brand .logo{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#1f5fd6,#ff7a3c);display:grid;place-items:center;color:#fff}
   .brandlogo{height:26px;width:auto;display:block}
   .brandsub{font-size:.64rem;font-weight:600;color:var(--slate);letter-spacing:.03em}
   .brand small{display:block;font-size:.62rem;font-weight:600;color:var(--slate);letter-spacing:.03em}
   .nav-links{display:flex;gap:22px;align-items:center}
-  .nav-links a{font-size:.78rem;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.06em}
+  .nav-links a{font-size:.78rem;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
   .nav-links a:hover{color:var(--teal)}
   .nav-links .btn{padding:9px 18px;font-size:.86rem;color:#fff}
-  @media(max-width:860px){.nav-links a:not(.btn){display:none}}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px;border-radius:9px;align-items:center;justify-content:center}.nav-toggle:hover{background:var(--cloud)}.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;width:20px;height:2px;background:var(--ink);border-radius:2px}.nav-toggle span{position:relative;display:block}.nav-toggle span::before{top:-6px;left:0}.nav-toggle span::after{top:6px;left:0}@media(max-width:1024px){.nav-toggle{display:inline-flex}.nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(20,20,25,.10);padding:8px 18px 16px;display:none}.nav-links.open{display:flex}.nav-links a:not(.btn){display:block;padding:14px 4px;border-bottom:1px solid var(--line);font-size:.86rem}.nav-links .btn{margin-top:12px;text-align:center;justify-content:center}}@media(max-width:600px){.brandsub{display:none}}
 
   /* HERO */
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
@@ -497,6 +497,7 @@
     <a href="/">Home</a><a href="schools.html">School Edition</a><a href="kindness-star.html" aria-current="page">Kindness Stars</a><a href="about.html">About</a>
     <a class="btn btn-primary" href="https://www.ganjingworld.com/creators/kindnessstar/form" target="_blank" rel="noopener">Apply now</a>
   </nav>
+  <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
 </div></header>
 
 <!-- HERO -->
@@ -637,5 +638,6 @@ function wireRoll(rid,pid,nid){var r=document.getElementById(rid);if(!r)return;f
 wireRoll('ashorts','ambPrev','ambNext');
 wireRoll('exroll','exPrev','exNext');
 </script>
+<script>(function(){var t=document.querySelector(".nav-toggle"),n=document.querySelector(".nav-links");if(!t||!n)return;t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o);});n.addEventListener("click",function(e){if(e.target.closest("a")){n.classList.remove("open");t.setAttribute("aria-expanded","false");}});})();</script>
 </body>
 </html>
