@@ -510,6 +510,20 @@
   .ecard p{font-size:.86rem;color:var(--ink);line-height:1.46;margin:0 0 11px}
   .ecard b{display:block;font-size:.87rem;color:var(--ink);font-weight:800}
   .ecard span{font-size:.73rem;color:var(--slate);line-height:1.3;display:block;margin-top:2px}
+  .kmap{margin:22px 0 6px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:26px 28px}
+  .kmap-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  .kmap-eyebrow{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+  .kmap-head h3{font-size:1.3rem;font-weight:800;margin:0 0 4px;letter-spacing:-.01em;color:var(--ink)}
+  .kmap-head p{margin:0;color:var(--slate);font-size:.95rem;max-width:520px}
+  .kmap-count{text-align:center;flex:0 0 auto}
+  .kmap-count b{display:block;font-size:2.4rem;font-weight:800;color:#f0801c;line-height:1}
+  .kmap-count span{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--slate)}
+  .kmap-pins{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+  @media(max-width:560px){.kmap-pins{grid-template-columns:1fr}}
+  .kpin{display:flex;gap:12px;align-items:center;background:var(--cloud);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .kpin .pinico{flex:0 0 auto;width:32px;height:32px;color:var(--coral)}
+  .kpin b{display:block;font-size:1.02rem;font-weight:800;color:var(--ink)}
+  .kpin span{font-size:.82rem;color:var(--slate)}
   .scasewrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
   @media(max-width:760px){
     .scasewrap{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:6px}
@@ -597,6 +611,16 @@
   <div class="sec-head">
     <div><h2 class="st">Recognized by leaders worldwide</h2><p class="sub">Official proclamations, citations, and endorsements from elected officials and institutions.</p></div>
     <div class="rollnav"><button class="rnav" id="prPrev" type="button" aria-label="Scroll left">‹</button><button class="rnav" id="prNext" type="button" aria-label="Scroll right">›</button></div>
+  </div>
+    <div class="kmap">
+    <div class="kmap-head">
+      <div><span class="kmap-eyebrow">The Kindness Map</span><h3>U.S. states standing with kindness</h3><p>Governors have officially endorsed #BeKindBeCool — and the map is growing.</p></div>
+      <div class="kmap-count"><b>2</b><span>states · and counting</span></div>
+    </div>
+    <div class="kmap-pins">
+      <div class="kpin"><svg class="pinico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg><div><b>New Jersey</b><span>Gov. Mikie Sherrill</span></div></div>
+      <div class="kpin"><svg class="pinico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg><div><b>Massachusetts</b><span>Gov. Healey &amp; Lt. Gov. Driscoll</span></div></div>
+    </div>
   </div>
   <div class="nroll" id="proclroll">
     <a class="ncard" href="https://www.ganjingworld.com/article/1il1l8v3ppn4ieumia4NDtxG611k1c" target="_blank" rel="noopener"><div class="nthumb"><img loading="lazy" src="https://image1-us-west.cloudokyo.cloud/image/v14/6d/8e/82/6d8e82d9-b1cf-42f1-a4db-8aa8e554cbeb/1280.webp" alt=""></div><div class="nbody"><h3>New Jersey Governor Mikie Sherrill Champions the #BeKindBeCool Global Video Awards</h3><div class="nsrc">Read on Gan Jing World →</div></div></a>
