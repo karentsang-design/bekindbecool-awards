@@ -513,13 +513,14 @@
   .eroll::-webkit-scrollbar{display:none}
   .eroll .ecard{flex:0 0 300px;scroll-snap-align:start}
   @media(max-width:520px){.eroll .ecard{flex-basis:82%}}
-  .pbens{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:28px auto 0}
-  @media(max-width:760px){.pbens{grid-template-columns:1fr}}
-  .pben{position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background-size:cover;background-position:center;box-shadow:var(--shadow)}
-  .pben .pscrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,28,60,.05) 30%,rgba(16,28,60,.92))}
-  .pben .ptxt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;z-index:2}
-  .pben h4{font-size:1.5rem;font-weight:800;margin:0 0 6px;line-height:1.05;letter-spacing:-.01em;text-shadow:0 2px 10px rgba(0,0,0,.45)}
-  .pben p{font-size:.96rem;line-height:1.45;opacity:1;margin:0;font-weight:500;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+  .pbens{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1040px;margin:28px auto 0}
+  @media(max-width:860px){.pbens{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.pbens{grid-template-columns:1fr}}
+  .pben{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .pben .pimg{aspect-ratio:16/10;background-size:cover;background-position:center}
+  .pben .ptxt{padding:16px 16px 18px}
+  .pben h4{font-size:1.1rem;font-weight:800;margin:0 0 5px;line-height:1.15;color:var(--ink)}
+  .pben p{font-size:.88rem;line-height:1.45;color:var(--slate);margin:0}
   .subgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:820px;margin:20px auto 0}
   @media(max-width:680px){.subgrid{grid-template-columns:1fr}}
   .subcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
@@ -733,9 +734,10 @@
     </tbody></table></div>
   <p class="sub" style="max-width:780px;margin:14px auto 0;font-size:.86rem">Every student competes within their own age band. Kindness Videos compete in the Open Awards (scored on creativity &amp; engagement).</p>
   <div class="pbens">
-    <div class="pben" style="background-image:url('assets/cat_school.jpg')"><span class="pscrim"></span><div class="ptxt"><h4>Kindness School</h4><p>Standout participating schools earn special recognition.</p></div></div>
-    <div class="pben" style="background-image:url('assets/b_billboard.jpg')"><span class="pscrim"></span><div class="ptxt"><h4>Times Square billboard</h4><p>Selected work lights up the Nasdaq billboard in New York City.</p></div></div>
-    <div class="pben" style="background-image:url('assets/b_certificate.png')"><span class="pscrim"></span><div class="ptxt"><h4>Certificates for everyone</h4><p>Every participant — students, teachers &amp; schools — receives one.</p></div></div>
+    <div class="pben"><div class="pimg" style="background-image:url('assets/cat_school.jpg')"></div><div class="ptxt"><h4>Kindness School</h4><p>Standout participating schools earn special recognition.</p></div></div>
+    <div class="pben"><div class="pimg" style="background-image:url('assets/b_billboard.jpg')"></div><div class="ptxt"><h4>Times Square billboard</h4><p>Selected work lights up the Nasdaq billboard in New York City.</p></div></div>
+    <div class="pben"><div class="pimg" style="background-image:url('assets/b_certificate.png')"></div><div class="ptxt"><h4>Certificates for everyone</h4><p>Every participant — students, teachers &amp; schools — receives one.</p></div></div>
+    <div class="pben"><div class="pimg" style="background-image:url('assets/gjk_streaming.png')"></div><div class="ptxt"><h4>Gan Jing Kids streaming</h4><p>Excellence Award winners get a 1-year Gan Jing Kids membership — safe, values-based streaming.</p></div></div>
   </div>
 </div></section>
 
