@@ -517,7 +517,8 @@
   @media(max-width:860px){.pbens{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:480px){.pbens{grid-template-columns:1fr}}
   .pben{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-  .pben .pimg{aspect-ratio:16/10;background-size:cover;background-position:center}
+  .pben .pimg{aspect-ratio:16/10;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#eceff3}
+  .pben .pimg.fit{background-size:contain}
   .pben .ptxt{padding:16px 16px 18px}
   .pben h4{font-size:1.1rem;font-weight:800;margin:0 0 5px;line-height:1.15;color:var(--ink)}
   .pben p{font-size:.88rem;line-height:1.45;color:var(--slate);margin:0}
@@ -736,8 +737,8 @@
   <div class="pbens">
     <div class="pben"><div class="pimg" style="background-image:url('assets/cat_school.jpg')"></div><div class="ptxt"><h4>Kindness School</h4><p>Standout participating schools earn special recognition.</p></div></div>
     <div class="pben"><div class="pimg" style="background-image:url('assets/b_billboard.jpg')"></div><div class="ptxt"><h4>Times Square billboard</h4><p>Selected work lights up the Nasdaq billboard in New York City.</p></div></div>
-    <div class="pben"><div class="pimg" style="background-image:url('assets/b_certificate.png')"></div><div class="ptxt"><h4>Certificates for everyone</h4><p>Every participant — students, teachers &amp; schools — receives one.</p></div></div>
-    <div class="pben"><div class="pimg" style="background-image:url('assets/gjk_streaming.png')"></div><div class="ptxt"><h4>Gan Jing Kids streaming</h4><p>Excellence Award winners get a 1-year Gan Jing Kids membership — safe, values-based streaming.</p></div></div>
+    <div class="pben"><div class="pimg fit" style="background-image:url('assets/b_certificate.png')"></div><div class="ptxt"><h4>Certificates for everyone</h4><p>Every participant — students, teachers &amp; schools — receives one.</p></div></div>
+    <div class="pben"><div class="pimg fit" style="background-image:url('assets/gjk_streaming.png')"></div><div class="ptxt"><h4>Gan Jing Kids streaming</h4><p>Excellence Award winners receive a 1-year Gan Jing Kids membership.</p></div></div>
   </div>
 </div></section>
 
