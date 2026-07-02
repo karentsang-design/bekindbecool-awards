@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificate Maker · #BeKindBeCool School Edition</title>
+<style>
+  :root{--blue:#1f4fd0;--gold:#f4b740;--coral:#ff5234;--ink:#15171c;--slate:#6f747c;--cloud:#f5f3ef;--line:#e7e4dd}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cloud)}
+  .top{background:#fff;border-bottom:1px solid var(--line);padding:14px 0}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  .top .wrap{display:flex;align-items:center;gap:12px}
+  .top img{height:34px;width:auto;display:block}
+  .top small{color:var(--slate);font-weight:700}
+  .layout{max-width:1120px;margin:26px auto;padding:0 22px;display:grid;grid-template-columns:340px 1fr;gap:26px;align-items:start}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+  .panel h1{font-size:1.24rem;margin:0 0 4px}
+  .panel p.lede{color:var(--slate);font-size:.92rem;margin:0 0 18px;line-height:1.5}
+  label{display:block;font-weight:700;font-size:.82rem;margin:14px 0 6px}
+  input,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font-size:.95rem;font-family:inherit;color:var(--ink);background:#fff}
+  input:focus,select:focus{outline:none;border-color:var(--blue)}
+  .hint{color:var(--slate);font-size:.76rem;margin-top:5px;line-height:1.45}
+  .btn{display:block;width:100%;margin-top:20px;padding:13px;border:0;border-radius:11px;background:var(--blue);color:#fff;font-weight:800;font-size:1rem;cursor:pointer}
+  .btn:hover{background:#1a44b4}
+  .btn.ghost{background:#fff;color:var(--blue);border:1.5px solid var(--blue);margin-top:10px}
+  .stagewrap{overflow-x:auto;padding-bottom:6px}
+  /* Certificate — US Letter landscape */
+  .cert{width:1056px;height:816px;background:#fff;position:relative;margin:0 auto;
+        box-shadow:0 20px 50px rgba(20,20,25,.16);border:2px solid var(--blue);
+        display:flex;flex-direction:column;align-items:center;text-align:center;padding:58px 84px}
+  .cert::before{content:"";position:absolute;inset:14px;border:1.5px solid var(--gold);border-radius:4px;pointer-events:none}
+  .cert-corner{position:absolute;width:64px;height:64px;border:0}
+  .cert-logo{height:64px;width:auto;margin:8px 0 4px}
+  .cert-eyebrow{margin-top:16px;font-size:1rem;letter-spacing:.28em;text-transform:uppercase;color:var(--slate);font-weight:800}
+  .cert-title{font-size:2.9rem;font-weight:800;letter-spacing:-.01em;margin:6px 0 2px;color:var(--ink)}
+  .cert-of{font-size:1.15rem;color:var(--slate);margin:0 0 26px}
+  .cert-present{font-size:1.05rem;color:var(--slate);margin:0}
+  .cert-name{font-family:"Georgia","Times New Roman",serif;font-size:3.5rem;color:var(--blue);font-weight:700;margin:8px 0 6px;line-height:1.1;padding:0 20px}
+  .cert-rule{width:420px;height:2px;background:var(--gold);margin:2px auto 22px}
+  .cert-body{font-size:1.14rem;color:var(--ink);line-height:1.6;max-width:720px;margin:0 auto}
+  .cert-body strong{color:var(--blue)}
+  .cert-theme{margin-top:10px;font-size:1.05rem;color:var(--slate)}
+  .cert-theme b{color:var(--ink)}
+  .cert-foot{position:absolute;left:84px;right:84px;bottom:64px;display:flex;justify-content:space-between;align-items:flex-end}
+  .cert-sig{text-align:center;width:300px}
+  .cert-sig .line{border-top:1.5px solid var(--ink);margin-bottom:6px}
+  .cert-sig .role{font-size:.86rem;color:var(--slate);font-weight:700}
+  .cert-sig .who{font-size:.95rem;font-weight:700;margin-top:2px}
+  .cert-seal{width:118px;height:118px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fbe4a6,var(--gold));
+             display:flex;flex-direction:column;align-items:center;justify-content:center;color:#7a5100;
+             box-shadow:0 4px 14px rgba(244,183,64,.5);border:3px solid #fff;outline:2px solid var(--gold)}
+  .cert-seal b{font-size:1.5rem;line-height:1;font-weight:900}
+  .cert-seal span{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-top:4px;font-weight:800}
+  @media print{
+    @page{size:letter landscape;margin:0}
+    body{background:#fff}
+    .top,.layout>.panel,.print-note{display:none!important}
+    .layout{display:block;margin:0;padding:0}
+    .stagewrap{overflow:visible;padding:0}
+    .cert{box-shadow:none;margin:0;width:100%;height:100vh;border-width:2px}
+  }
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <img src="assets/bekindbecool_logo.png" alt="#BeKindBeCool">
+  <small>School Edition · Certificate Maker</small>
+</div></div>
+
+<div class="layout">
+  <div class="panel">
+    <h1>Certificate Maker</h1>
+    <p class="lede">Make a free certificate of participation for any student. Fill in the details, then print or save as PDF.</p>
+
+    <label for="name">Student name or initials</label>
+    <input id="name" type="text" placeholder="e.g. A.L. or Ava L." value="A.L." maxlength="42">
+    <p class="hint">For students under 18, we recommend using <strong>initials only</strong> on public or shared certificates.</p>
+
+    <label for="school">School or class</label>
+    <input id="school" type="text" placeholder="e.g. Lincoln Elementary, Grade 4" value="" maxlength="60">
+
+    <label for="band">Age band <span style="font-weight:500;color:var(--slate)">(optional)</span></label>
+    <select id="band">
+      <option value="">— none —</option>
+      <option>Ages 6–8</option>
+      <option>Ages 9–11</option>
+      <option>Ages 12–14</option>
+      <option>Ages 15–18</option>
+    </select>
+
+    <label for="signer">Presented by <span style="font-weight:500;color:var(--slate)">(teacher / school)</span></label>
+    <input id="signer" type="text" placeholder="e.g. Ms. Rivera" value="" maxlength="40">
+
+    <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+    <p class="hint print-note" style="margin-top:12px">Tip: in the print dialog, choose <strong>“Save as PDF”</strong> and set layout to <strong>Landscape</strong>.</p>
+  </div>
+
+  <div class="stagewrap">
+    <div class="cert" id="cert">
+      <img class="cert-logo" src="assets/bekindbecool_logo.png" alt="#BeKindBeCool">
+      <div class="cert-eyebrow">Kindness Awards · 2026–27</div>
+      <div class="cert-title">Certificate of Participation</div>
+      <div class="cert-of">School Edition</div>
+      <p class="cert-present">This certificate is proudly presented to</p>
+      <div class="cert-name" id="c-name">A.L.</div>
+      <div class="cert-rule"></div>
+      <div class="cert-body">for taking part in the <strong>#BeKindBeCool Kindness Awards</strong> and choosing to share an act of kindness with the world.</div>
+      <div class="cert-theme" id="c-meta">Theme: <b>Choose Kindness</b></div>
+
+      <div class="cert-foot">
+        <div class="cert-sig">
+          <div class="line"></div>
+          <div class="who" id="c-signer">&nbsp;</div>
+          <div class="role">Presented by</div>
+        </div>
+        <div class="cert-seal"><b>BK<br>BC</b><span>Kindness</span></div>
+        <div class="cert-sig">
+          <div class="line"></div>
+          <div class="who">#BeKindBeCool</div>
+          <div class="role">bekindbecool.world</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var name=document.getElementById('name'),school=document.getElementById('school'),
+      band=document.getElementById('band'),signer=document.getElementById('signer'),
+      cName=document.getElementById('c-name'),cMeta=document.getElementById('c-meta'),
+      cSigner=document.getElementById('c-signer');
+  function esc(t){return t.replace(/[<>&]/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c];});}
+  function render(){
+    cName.textContent=(name.value.trim()||'Student');
+    var parts=[]; parts.push('Theme: <b>Choose Kindness</b>');
+    if(school.value.trim()) parts.push(esc(school.value.trim()));
+    if(band.value) parts.push(esc(band.value));
+    cMeta.innerHTML=parts.join(' &nbsp;·&nbsp; ');
+    cSigner.innerHTML=signer.value.trim()?esc(signer.value.trim()):'&nbsp;';
+  }
+  [name,school,band,signer].forEach(function(el){el.addEventListener('input',render);el.addEventListener('change',render);});
+  render();
+</script>
+</body>
+</html>
