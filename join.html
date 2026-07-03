@@ -411,7 +411,14 @@
   .copy{margin-top:12px;font-size:.78rem;color:rgba(255,255,255,.45)}
   .note{max-width:var(--max);margin:10px auto 0;padding:0 22px;font-size:.72rem;color:rgba(255,255,255,.38)}
 </style>
-<style>.nav .brandlogo{height:44px}@media(max-width:600px){.nav .brandlogo{height:34px}}</style>
+<style>.nav .brandlogo{height:44px}@media(max-width:600px){.nav .brandlogo{height:34px}}  .tl{max-width:640px;margin:24px auto 0;position:relative;text-align:left}
+  .tl:before{content:"";position:absolute;left:18px;top:8px;bottom:8px;width:2px;background:var(--line)}
+  .tli{position:relative;padding:0 0 30px 56px}
+  .tli:last-child{padding-bottom:0}
+  .tli .d{position:absolute;left:7px;top:-1px;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:.82rem;display:grid;place-items:center;box-shadow:0 0 0 5px #fff}
+  .tli h4{font-size:1.2rem;font-weight:800;margin:0 0 4px;letter-spacing:-.01em;color:var(--ink)}
+  .tli p{font-size:1rem;color:var(--slate);line-height:1.55;margin:0}
+</style>
 </head>
 <body>
 
@@ -449,19 +456,14 @@
   <p class="sub">Start with a kind act, create something — then share to pass it on.</p>
   <div class="fmt-row" style="margin-top:22px"><span>Video</span><span>Shorts</span><span>Artwork</span><span>Music</span><span>Skit or drama</span><span>Vlog</span></div>
 </div>
-<div class="wrap" style="margin-top:32px">
-  <div class="enter-card">
-  <div class="hiw">
-    <div class="hiw-step"><div class="hiw-ic" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h4>1. Create</h4><p>Do something kind, then capture it as a video, short, or artwork.</p></div>
-    <div class="hiw-arrow">→</div>
-    <div class="hiw-step"><div class="hiw-ic" style="background:#f59e0b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"/><path d="M7 9l5-5 5 5"/><path d="M5 20h14"/></svg></div><h4>2. Submit</h4><p>Post it on Gan Jing World with #BeKindBeCool.</p></div>
-    <div class="hiw-arrow">→</div>
-    <div class="hiw-step"><div class="hiw-ic" style="background:#1f8a5b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c.5-3 3-4.5 5.5-4.5S14 17 14.5 20"/><path d="M16 5.5a3 3 0 0 1 0 5.5"/><path d="M18 20c-.3-2.2-1.3-3.6-3-4.2"/></svg></div><h4>3. Inspire</h4><p>Winning entries are showcased on the Times Square billboard.</p></div>
-    <div class="hiw-arrow">→</div>
-    <div class="hiw-step"><div class="hiw-ic" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 2.5 4.5"/><path d="M16 6h2.5a2.5 2.5 0 0 1-2.5 4.5"/><path d="M12 12v3"/><path d="M9.5 20h5l-.7-3h-3.6l-.7 3z"/></svg></div><h4>4. Win</h4><p>Share $10,000 in prizes and earn a kindness certificate.</p></div>
+<div class="wrap" style="margin-top:24px">
+  <div class="tl">
+    <div class="tli"><div class="d">1</div><h4>Create</h4><p>Do something kind, then capture it as a video, short, or artwork.</p></div>
+    <div class="tli"><div class="d">2</div><h4>Submit</h4><p>Post it on Gan Jing World with #BeKindBeCool.</p></div>
+    <div class="tli"><div class="d">3</div><h4>Inspire</h4><p>Winning entries are showcased on the Times Square billboard.</p></div>
+    <div class="tli"><div class="d">4</div><h4>Win</h4><p>Share $10,000 in prizes and earn a kindness certificate.</p></div>
   </div>
-  <a class="btn btn-primary" style="margin-top:22px" href="https://www.ganjingworld.com/hashtag/BeKindBeCool?tab=all&l=Kindness+Awards" target="_blank" rel="noopener">Submit your work →</a>
-  </div>
+  <div class="center" style="margin-top:26px"><a class="btn btn-primary" href="https://www.ganjingworld.com/hashtag/BeKindBeCool?tab=all&l=Kindness+Awards" target="_blank" rel="noopener">Submit your work →</a></div>
 </div>
 
 <div class="wrap" style="margin-top:54px">
@@ -477,28 +479,6 @@
 <div class="wrap"><div class="flipgrid" id="flipgrid"></div><div class="center" style="margin-top:20px"><button class="btn btn-outline" id="shuffleCards" type="button">Shuffle cards</button></div></div>
 </section>
 
-<!-- BENEFITS -->
-<section class="benefits" id="benefits"><div class="wrap">
-  <div class="center"><h2 class="st">Why you should join</h2><p class="sub">More than a contest — recognition that puts your kindness on the world stage.</p></div>
-  <div class="bgrid">
-    <div class="bcard cblue">
-      <div class="bface"><div class="big">$10,000 in cash</div><div class="sub">total prize</div></div>
-      <div class="bback" style="background-image:url('assets/b_prize.webp')"><span class="scrim"></span><div class="txt"><h4>$10,000 in prizes</h4><p>Gold, Silver, Bronze and School Edition awards &mdash; shared among winners every year.</p></div></div>
-    </div>
-    <div class="bcard cgold">
-      <div class="bface"><div class="big">Times Square</div><div class="sub">billboard showcase</div></div>
-      <div class="bback" style="background-image:url('assets/b_billboard.jpg')"><span class="scrim"></span><div class="txt"><h4>Times Square billboard</h4><p>Winning entries light up the Nasdaq billboard in the heart of New York City.</p></div></div>
-    </div>
-    <div class="bcard cgold">
-      <div class="bface"><div class="big">Kindness Star</div><div class="sub">winner certificates</div></div>
-      <div class="bback" style="background-image:url('assets/b_certificate.png')"><span class="scrim"></span><div class="txt"><h4>Kindness Star certificates</h4><p>Winners and standout creators receive official Kindness Star certificates.</p></div></div>
-    </div>
-    <div class="bcard cblue">
-      <div class="bface"><div class="big">Winners Spotlight</div><div class="sub">celebration &amp; media</div></div>
-      <div class="bback" style="background-image:url('assets/b_celebration.jpg')"><span class="scrim"></span><div class="txt"><h4>Celebrated &amp; covered</h4><p>Winners are honored at the NYC awards celebration and featured across partner media.</p></div></div>
-    </div>
-  </div>
-</div></section>
 
 <!-- TRACKS & PRIZES -->
 <section id="tracks"><div class="wrap">
