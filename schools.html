@@ -658,6 +658,27 @@
 </style>
 <style>.nav .brandlogo{height:44px}@media(max-width:600px){.nav .brandlogo{height:34px}}</style>
 <!-- rev: hero-tight-2026-06-22 -->
+<style>
+  .ecogrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+  @media(max-width:760px){.ecogrid{grid-template-columns:1fr}}
+  .ecocard{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .ecoimg{aspect-ratio:16/9;background-size:cover;background-position:center;position:relative;background-color:#eceff3}
+  .ecobadge{position:absolute;top:12px;left:12px;background:#f0801c;color:#fff;font-weight:800;font-size:.78rem;padding:6px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.22)}
+  .ecobadge.blue{background:#1f4fd0}
+  .ecobody{padding:20px 22px 22px}
+  .ecokick{font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+  .ecobody h3{font-size:1.3rem;font-weight:800;margin:0 0 6px;color:var(--ink)}
+  .ecobody>p{font-size:.95rem;color:var(--slate);line-height:1.5;margin:0 0 12px}
+  .ecolist{list-style:none;margin:0 0 14px;padding:0}
+  .ecolist li{position:relative;padding:5px 0 5px 22px;font-size:.92rem;color:var(--ink);border-top:1px solid #f1efe9}
+  .ecolist li:first-child{border-top:0}
+  .ecolist li:before{content:"\2713";position:absolute;left:0;color:#1f8a5b;font-weight:900}
+  .ecochips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+  .ecochips span{font-size:.72rem;font-weight:700;color:#4a4f57;background:var(--cloud);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+  .ecocta{display:inline-block;font-weight:800;font-size:.95rem;color:#fff;background:#f0801c;padding:11px 20px;border-radius:999px;text-decoration:none;box-shadow:0 6px 16px rgba(240,128,28,.28);transition:transform .15s ease}
+  .ecocta:hover{transform:translateY(-2px)}
+  .ecocta.blue{background:#1f4fd0;box-shadow:0 6px 16px rgba(31,79,208,.28)}
+</style>
 </head>
 <body id="top">
 
@@ -738,7 +759,7 @@
     <div class="pben"><div class="pimg" style="background-image:url('assets/cat_school.jpg')"></div><div class="ptxt"><h4>Kindness School</h4><p>Standout participating schools earn special recognition.</p></div></div>
     <div class="pben"><div class="pimg" style="background-image:url('assets/b_billboard.jpg')"></div><div class="ptxt"><h4>Times Square billboard</h4><p>Selected work lights up the Nasdaq billboard in New York City.</p></div></div>
     <div class="pben"><div class="pimg fit" style="background-image:url('assets/b_certificate.png')"></div><div class="ptxt"><h4>Certificates for everyone</h4><p>Every participant — students, teachers &amp; schools — receives one.</p></div></div>
-    <div class="pben"><div class="pimg fit" style="background-image:url('assets/gjk_streaming.png')"></div><div class="ptxt"><h4>Gan Jing Kids streaming</h4><p>Excellence Award winners receive a 1-year Gan Jing Kids membership.</p></div></div>
+    <div class="pben"><div class="pimg fit" style="background-image:url('assets/gjk_streaming.png')"></div><div class="ptxt"><h4>Gan Jing Kids membership</h4><p>Excellence Award winners get 1 year of Gan Jing Kids &mdash; safe video for class &amp; home.</p></div></div>
   </div>
 </div></section>
 
@@ -771,6 +792,43 @@
     <a class="rescard" href="teachers-guide.pdf" target="_blank" rel="noopener"><div class="resico" style="background:#1f4fd0"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/></svg></div><h4>Teacher&rsquo;s Guide</h4><p>Lesson plan, kindness prompts, and everything to run it in one class.</p><span class="reslink">Download the guide &rarr;</span></a>
     <a class="rescard" href="https://www.ganjingworld.com/creators/bekindbecool-art/form" target="_blank" rel="noopener"><div class="resico" style="background:#1f8a5b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 10h6M9 14h4"/></svg></div><h4>Entry form</h4><p>One short form &mdash; a teacher can submit the whole class at once.</p><span class="reslink">Get the form &rarr;</span></a>
     <a class="rescard" href="kindness-certificate.html" target="_blank" rel="noopener"><div class="resico" style="background:#f0801c"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13l-2 7 5-3 5 3-2-7"/></svg></div><h4>Certificates</h4><p>A printable certificate of participation for every student who takes part.</p><span class="reslink">Create a certificate &rarr;</span></a>
+  </div>
+</div></section>
+
+<!-- FREE FOR YOUR CLASSROOM (GJW ecosystem) -->
+<section id="classroom" style="background:var(--cloud)"><div class="wrap">
+  <div class="center"><h2 class="st">Free for your classroom, from Gan Jing World</h2><p class="sub">#BeKindBeCool is one of many free resources on Gan Jing World &mdash; a safe, ad-free platform built for learning.</p></div>
+  <div class="ecogrid">
+    <div class="ecocard">
+      <div class="ecoimg" style="background-image:url('assets/gjw_platform.png')"><span class="ecobadge">$1,588/yr value &middot; FREE</span></div>
+      <div class="ecobody">
+        <div class="ecokick" style="color:#f0801c">Gan Jing Campus</div>
+        <h3>Free Teacher Premium</h3>
+        <p>A safe platform plus premium classroom tools &mdash; free for every teacher.</p>
+        <ul class="ecolist">
+          <li>Custom class hashtags &amp; a Campus channel</li>
+          <li>PD courses &amp; teaching materials</li>
+          <li>Free Gan Jing Kids CLA &amp; ELA classes</li>
+        </ul>
+        <div class="ecochips"><span>No ads</span><span>Premium channel</span><span>Educational resources</span></div>
+        <a class="ecocta" href="https://www.ganjingworld.com/support-us" target="_blank" rel="noopener">Sign up free &rarr;</a>
+      </div>
+    </div>
+    <div class="ecocard">
+      <div class="ecoimg" style="background-image:url('assets/gjk_streaming.png')"><span class="ecobadge blue">Safe for kids</span></div>
+      <div class="ecobody">
+        <div class="ecokick" style="color:#1f4fd0">Gan Jing Kids</div>
+        <h3>Safe video for class &amp; home</h3>
+        <p>6,000+ safe shows, courses &amp; original movies &mdash; no ads, no comments, non-addictive.</p>
+        <ul class="ecolist">
+          <li>Show it in class without ads or rabbit holes</li>
+          <li>Curated by age, subject &amp; values</li>
+          <li>Recommend it to families for safe screen time</li>
+        </ul>
+        <div class="ecochips"><span>No ads</span><span>No comments</span><span>Family-safe</span></div>
+        <a class="ecocta blue" href="https://www.ganjingworld.com/gjwplus/kids" target="_blank" rel="noopener">Explore Gan Jing Kids &rarr;</a>
+      </div>
+    </div>
   </div>
 </div></section>
 
