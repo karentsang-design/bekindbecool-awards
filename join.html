@@ -432,12 +432,18 @@
   .btn-primary{ background:var(--blue); }
   .rescard,.pben,.subcard,.gcard,.ecocard,.ecard,.bcard,.vcard,.scase,.gw,.invite,.gcta{ border-radius:12px; }
 </style>
+<style id="backbtn-css">
+  .nav-left{display:flex;align-items:center;gap:12px}
+  .backbtn{display:inline-flex;align-items:center;gap:5px;font-family:'Inter',ui-sans-serif,system-ui,sans-serif;font-size:.8rem;font-weight:700;color:var(--slate);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;white-space:nowrap;line-height:1;transition:background .15s ease,color .15s ease,border-color .15s ease}
+  .backbtn:hover{background:var(--cloud);color:var(--ink);border-color:#cfd6df}
+  @media(max-width:600px){.backbtn{padding:5px 9px;font-size:.72rem}.backbtn .bb-ext{display:none}}
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="#top"><img class="brandlogo" src="assets/bekindbecool_logo.png" alt="#BeKindBeCool"><small class="brandsub">Kindness Awards</small></a>
+  <div class="nav-left"><a class="backbtn" href="https://www.ganjingworld.com/hashtag/BeKindBeCool" target="_blank" rel="noopener" aria-label="Back to the #BeKindBeCool event page on Gan Jing World"><span aria-hidden="true">←</span> Back<span class="bb-ext"> to event page</span></a><a class="brand" href="#top"><img class="brandlogo" src="assets/bekindbecool_logo.png" alt="#BeKindBeCool"><small class="brandsub">Kindness Awards</small></a></div>
   <nav class="nav-links">
     <a href="/">Home</a><a href="/join" aria-current="page">How to Join</a><a href="schools.html">School Edition</a><a href="kindness-star.html">Kindness Stars</a>
     <a class="btn btn-primary" href="https://www.ganjingworld.com/hashtag/BeKindBeCool?tab=all&l=Kindness+Awards" target="_blank" rel="noopener">Join now</a>
