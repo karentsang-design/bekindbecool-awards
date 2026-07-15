@@ -661,6 +661,22 @@
   </div>
 </div></section>
 
+<!-- COMMUNITY ROW -->
+<section id="community" style="padding:clamp(30px,4.2vw,48px) 0"><div class="wrap">
+  <div class="crow-head">
+    <div class="crow-head-l">
+      <span class="crow-livepill"><span class="crow-livedot"></span><span class="crow-live-t">From the community</span></span>
+      <h2 class="st" style="margin:0">#BeKindBeCool, right now</h2>
+    </div>
+    <a class="crow-seeall" href="https://www.ganjingworld.com/hashtag/BeKindBeCool" target="_blank" rel="noopener">See all on Gan Jing World →</a>
+  </div>
+  <div class="crow-rail-wrap">
+    <button class="crow-nav prev" type="button" aria-label="Scroll left" onclick="document.getElementById('crowRail').scrollBy({left:-660,behavior:'smooth'})">‹</button>
+    <button class="crow-nav next" type="button" aria-label="Scroll right" onclick="document.getElementById('crowRail').scrollBy({left:660,behavior:'smooth'})">›</button>
+    <div class="crow-rail" id="crowRail"></div>
+  </div>
+</div></section>
+
 <!-- EVENT STATEMENT -->
 <section class="statement-band"><div class="wrap">
   <p class="statement">Choose kindness every day — in big or small ways — and share it with <span class="brandword">#BeKindBeCool</span>. We'll amplify it into a global movement.</p>
@@ -950,5 +966,50 @@ var P=[["https://image5-us-west.cloudokyo.cloud/image/v1/6a/56/96/6a5696fb-e09e-
 <style id="langsw-css">.langsw{position:relative;display:inline-flex;font-family:'Inter',ui-sans-serif,system-ui,sans-serif}.langsw-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid var(--line,#E5E7EB);border-radius:999px;padding:6px 10px;font:inherit;font-size:.82rem;font-weight:700;color:var(--slate,#4F5B6B);cursor:pointer;line-height:1}.langsw-btn:hover{background:var(--cloud,#F1F5F9);color:var(--ink,#1F2A44)}.langsw-caret{transition:transform .15s ease}.langsw.open .langsw-caret{transform:rotate(180deg)}.langsw-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:172px;background:#fff;border:1px solid var(--line,#E5E7EB);border-radius:12px;box-shadow:0 12px 30px rgba(20,20,25,.14);list-style:none;margin:0;padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s,visibility .15s;z-index:200}.langsw.open .langsw-menu{opacity:1;visibility:visible;transform:translateY(0)}.langsw-menu a{display:block;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--ink,#1F2A44);font-size:.95rem;font-weight:600;white-space:nowrap}.langsw-menu a:hover{background:var(--cloud,#F1F5F9)}.langsw-menu a.cur{background:#e7effb;color:#2E73E8;font-weight:800}@media(max-width:600px){.langsw-menu{right:auto;left:0}}</style><script id="langsw-js">(function(){var sw=document.getElementById("langsw");if(!sw)return;var path=location.pathname;var lang="en";if(path.indexOf("/zh-TW/")>-1)lang="zh";else if(path.indexOf("/vi/")>-1)lang="vi";var file=path.split("/").pop();if(!file)file="index.html";var bases={en:"/",zh:"/zh-TW/",vi:"/vi/"};var labels={en:"English",zh:"中文",vi:"Tiếng Việt"};sw.querySelector(".langsw-cur").textContent=labels[lang];sw.querySelectorAll("a[data-lang]").forEach(function(a){var l=a.getAttribute("data-lang");var href=bases[l]+(file==="index.html"?"":file);a.setAttribute("href",href);if(l===lang){a.classList.add("cur");a.setAttribute("aria-current","true");}});var btn=sw.querySelector(".langsw-btn");btn.addEventListener("click",function(e){e.stopPropagation();var o=sw.classList.toggle("open");btn.setAttribute("aria-expanded",o?"true":"false");});document.addEventListener("click",function(){sw.classList.remove("open");btn.setAttribute("aria-expanded","false");});document.addEventListener("keydown",function(e){if(e.key==="Escape"){sw.classList.remove("open");btn.setAttribute("aria-expanded","false");}});})();</script>
 <style id="backfab-css">.backfab{position:fixed;left:16px;bottom:16px;z-index:300;display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line,#E5E7EB);border-radius:999px;padding:9px 15px;font-family:'Inter',ui-sans-serif,system-ui,sans-serif;font-size:.85rem;font-weight:700;color:var(--slate,#4F5B6B);text-decoration:none;box-shadow:0 6px 20px rgba(20,20,25,.16);transition:transform .15s ease,box-shadow .15s ease,color .15s ease}.backfab:hover{color:var(--ink,#1F2A44);transform:translateY(-2px);box-shadow:0 10px 26px rgba(20,20,25,.22)}.backfab .bb-ext{display:inline}@media(max-width:600px){.backfab{left:12px;bottom:12px;padding:8px 13px;font-size:.78rem}}</style>
 <a class="backfab" href="https://www.ganjingworld.com/hashtag/BeKindBeCool" target="_blank" rel="noopener" aria-label="Back to the #BeKindBeCool event page on Gan Jing World"><span aria-hidden="true">←</span> Back<span class="bb-ext"> to event page</span></a>
+<style id="crow-css">
+.crow-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.crow-livepill{display:inline-flex;align-items:center;gap:7px;font-family:'Inter',sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:#c0392b;background:#fdecea;border-radius:999px;padding:5px 11px;margin-bottom:10px}
+.crow-livedot{width:8px;height:8px;border-radius:50%;background:#e23b2e;animation:crowpulse 1.6s infinite}
+@keyframes crowpulse{0%{box-shadow:0 0 0 0 rgba(226,59,46,.55)}70%{box-shadow:0 0 0 8px rgba(226,59,46,0)}100%{box-shadow:0 0 0 0 rgba(226,59,46,0)}}
+.crow-seeall{font-family:'Inter',sans-serif;font-weight:800;color:var(--blue,#2E73E8);text-decoration:none;font-size:.95rem;white-space:nowrap}
+.crow-seeall:hover{text-decoration:underline}
+.crow-rail-wrap{position:relative}
+.crow-rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;scroll-behavior:smooth}
+.crow-rail::-webkit-scrollbar{height:8px}
+.crow-rail::-webkit-scrollbar-thumb{background:var(--line,#E5E7EB);border-radius:8px}
+.crow-card{flex:0 0 300px;scroll-snap-align:start;text-decoration:none;color:inherit;display:block}
+@media(max-width:640px){.crow-card{flex-basis:248px}}
+.crow-thumb{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--cloud,#F1F5F9);box-shadow:0 6px 18px rgba(20,20,25,.08)}
+.crow-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.crow-card:hover .crow-thumb img{transform:scale(1.04)}
+.crow-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.crow-card:hover .crow-play{opacity:1}
+.crow-play span{width:46px;height:46px;border-radius:50%;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center}
+.crow-ct{padding:11px 2px 0}
+.crow-ct h3{font-family:'Poppins',sans-serif;font-size:.98rem;font-weight:700;line-height:1.3;color:var(--ink,#1F2A44);margin:0 0 6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.55em}
+.crow-meta{display:flex;align-items:center;gap:7px;font-family:'Inter',sans-serif;font-size:.82rem;color:var(--slate,#4F5B6B)}
+.crow-ch{width:20px;height:20px;border-radius:50%;background:var(--blue,#2E73E8);color:#fff;font-weight:800;font-size:.6rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.crow-meta .crow-dot{opacity:.5}
+.crow-nav{position:absolute;top:calc(50% - 42px);transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--line,#E5E7EB);box-shadow:0 4px 14px rgba(20,20,25,.14);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;color:var(--ink,#1F2A44);font-size:1.3rem;line-height:1;padding-bottom:3px}
+.crow-nav:hover{background:var(--cloud,#F1F5F9)}
+.crow-nav.prev{left:-8px}.crow-nav.next{right:-8px}
+@media(max-width:720px){.crow-nav{display:none}}
+</style>
+<script id="crow-data" type="application/json">[
+{"id":"1imbmvf66a01xhpvIIo93UAGm1q21c","t":"Lemonade Stand Lesson","ch":"Tiny Toon Tales","date":"Jul 11, 2026","thumb":"https://image1-us-west.cloudokyo.cloud/image/v14/30/1e/d6/301ed68d-63ce-4548-9c2a-69d00fde54bc/672.webp"},
+{"id":"1im92uq6oomL2ZrnUfV2AVs0k1bl1c","t":"The Boys Who Built a Movie Machine","ch":"Tiny Toon Tales","date":"Jul 10, 2026","thumb":"https://image1-us-west.cloudokyo.cloud/image/v14/77/3f/19/773f19be-3458-48e2-ba75-68e986a7c13c/672.webp"},
+{"id":"1ilq8q00sme3Gt6ZCGpR8qLnn15e1c","t":"Kids Learn #BeKindBeCool During America's 250th","ch":"Tiny Toon Tales","date":"Jul 5, 2026","thumb":"https://image1-us-west.cloudokyo.cloud/image/v14/f2/70/f6/f270f627-3075-4439-963d-21b9ea4d7432/672.webp"},
+{"id":"1i613cbr95sAzO3cnmVDj5Cun1251c","t":"Kind Advent Calendar — One Kind Act a Day","ch":"ADM School of Kindness","date":"Dec 16, 2025","thumb":"https://image1-us-east.cloudokyo.cloud/image/v3/04/77/b8/0477b8e7-1af4-4597-b765-6facc6ff1d74/672.webp"},
+{"id":"1i3so92k2lc1jtB4K97qU5VQI18g1c","t":"Kindness is Cool","ch":"Flinny TV","date":"Nov 18, 2025","thumb":"https://image1-us-west.cloudokyo.cloud/image/v3/77/93/44/77934471-172e-47cf-b724-a75e058ae6a9/672.webp"},
+{"id":"1iint1rvlar1T7oKApFdfMeJB12k1c","t":"The Star That Needed Kindness","ch":"Tiny Toon Tales","date":"May 26, 2026","thumb":"https://image1-ap-japan.cloudokyo.cloud/image/v14/cb/7c/54/cb7c54ff-ad92-4582-8090-9285477109fd/672.webp"},
+{"id":"1icqt0jgts06VcASOPIlLBGTn1mk1c","t":"Lights of Kindness — short animation","ch":"Tiny Toon Tales","date":"Mar 12, 2026","thumb":"https://image1-ap-japan.cloudokyo.cloud/image/v14/96/dc/16/96dc1665-1f3e-450c-a14f-815f120da836/672.webp"},
+{"id":"1ibsck9n4df2HOzxdz3f21j3e1vi1c","t":"Tiny Kindness Grows Big Magic","ch":"Tiny Toon Tales","date":"Feb 28, 2026","thumb":"https://image1-ap-japan.cloudokyo.cloud/image/v3/71/1f/cf/711fcf1c-fa88-440f-bc2b-ec4d4195db6f/672.webp"}
+]</script>
+<script id="crow-js">(function(){var el=document.getElementById('crowRail');var data=document.getElementById('crow-data');if(!el||!data)return;var V=[];try{V=JSON.parse(data.textContent)}catch(e){return}
+var ini=function(s){return s.split(/\s+/).map(function(w){return w[0]||''}).join('').slice(0,2).toUpperCase()};
+el.innerHTML=V.map(function(v){return '<a class="crow-card" href="https://www.ganjingworld.com/video/'+v.id+'" target="_blank" rel="noopener">'+
+'<div class="crow-thumb"><img src="'+v.thumb+'" alt="'+v.t.replace(/"/g,'&quot;')+'" loading="lazy"><div class="crow-play"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div></div>'+
+'<div class="crow-ct"><h3>'+v.t+'</h3><div class="crow-meta"><span class="crow-ch">'+ini(v.ch)+'</span><span>'+v.ch+'</span><span class="crow-dot">·</span><span>'+v.date+'</span></div></div></a>'}).join('');
+})();</script>
 </body>
 </html>
