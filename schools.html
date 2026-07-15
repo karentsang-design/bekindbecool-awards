@@ -766,18 +766,12 @@
 <section id="prizes" style="background:var(--cloud)"><div class="wrap">
   <div class="center"><h2 class="st">Prizes &amp; recognition</h2><p class="sub">For students, teachers, and schools.</p></div>
   <div class="prizewrap">
-  <div class="divtable"><table>
-    <thead><tr><th>Age band</th><th>Typical grades</th><th>1st Place</th><th>Excellence Awards</th></tr></thead>
-    <tbody>
-      <tr><td><b>Ages 6–8</b></td><td>Grades 1–3</td><td>$500</td><td>20 × Gan Jing Kids (1-yr)</td></tr>
-      <tr><td><b>Ages 9–11</b></td><td>Grades 4–6</td><td>$500</td><td>20 × Gan Jing Kids (1-yr)</td></tr>
-      <tr><td><b>Ages 12–14</b></td><td>Grades 7–9</td><td>$500</td><td>20 × Gan Jing Kids (1-yr)</td></tr>
-      <tr><td><b>Ages 15–18</b></td><td>Grades 10–12</td><td>$500</td><td>20 × Gan Jing Kids (1-yr)</td></tr>
-    </tbody></table></div>
-    <div class="pchoice">
-      <div class="pchoice-l"><span class="pchoice-tag">People's Choice</span><div class="pchoice-txt"><h4>Popularity Award</h4><p>Open to all ages — art or video. Awarded to the entry with the most likes + shares on the <strong>#BeKindBeCool</strong> hashtag.</p></div></div>
-      <div class="pchoice-amt">$500</div>
-    </div>
+  <div class="prizecards">
+    <div class="prizecard"><div class="pc-val">$500</div><div class="pc-title">First Prize</div><div class="pc-sub">in each of the 4 age bands</div></div>
+    <div class="prizecard"><div class="pc-val">80</div><div class="pc-title">Gan Jing Kids memberships</div><div class="pc-sub">20 per age band · 1 year each</div></div>
+    <div class="prizecard hl"><span class="pc-tag">People's Choice</span><div class="pc-val">$500</div><div class="pc-title">Popularity Award</div><div class="pc-sub">most likes + shares · all ages, art or video</div></div>
+  </div>
+  <div class="agebands"><span class="ageband"><b>Ages 6–8</b> · Grades 1–3</span><span class="ageband"><b>Ages 9–11</b> · Grades 4–6</span><span class="ageband"><b>Ages 12–14</b> · Grades 7–9</span><span class="ageband"><b>Ages 15–18</b> · Grades 10–12</span></div>
   <p class="prizenote">Every student competes within their own age band. Kindness Videos compete in the Open Awards (scored on creativity &amp; engagement).</p>
   <div class="center" style="margin-top:38px"><h3 class="subhead">Every participant is recognized</h3></div>
   <div class="pbens">
@@ -1064,6 +1058,17 @@ wireRoll('eroll','ePrev','eNext');
 .gjk-lead{text-align:center;max-width:740px;margin:36px auto 14px;color:var(--ink);font-size:1rem;line-height:1.5;font-weight:600}
 .gjk-banner{display:block;margin:0 auto}
 .gjk-banner img{width:100%;height:auto;border:1px solid var(--line);border-radius:16px;display:block;box-shadow:0 8px 24px rgba(20,20,25,.08)}
+.prizecards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+@media(max-width:760px){.prizecards{grid-template-columns:1fr}}
+.prizecard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;box-shadow:0 8px 24px rgba(20,20,25,.06);text-align:center;display:flex;flex-direction:column;align-items:center}
+.prizecard.hl{background:#eef4ff;border-color:#d9e6fb}
+.pc-tag{display:inline-block;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);background:#fff;border:1px solid #d9e6fb;border-radius:999px;padding:5px 11px;margin-bottom:12px}
+.pc-val{font-size:2.7rem;font-weight:900;color:var(--blue);letter-spacing:-.03em;line-height:1}
+.pc-title{font-size:1.06rem;font-weight:800;color:var(--ink);margin-top:9px}
+.pc-sub{font-size:.86rem;color:var(--slate);line-height:1.45;margin-top:5px;max-width:26ch}
+.agebands{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:20px}
+.ageband{font-size:.82rem;font-weight:700;color:var(--slate);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px}
+.ageband b{color:var(--ink);font-weight:800}
 </style>
 </body>
 </html>
