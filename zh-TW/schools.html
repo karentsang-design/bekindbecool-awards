@@ -766,18 +766,12 @@
 <section id="prizes" style="background:var(--cloud)"><div class="wrap">
   <div class="center"><h2 class="st">獎項與榮譽</h2><p class="sub">為學生、教師與學校而設。</p></div>
   <div class="prizewrap">
-  <div class="divtable"><table>
-    <thead><tr><th>年齡組</th><th>對應年級</th><th>第一名</th><th>優秀獎</th></tr></thead>
-    <tbody>
-      <tr><td><b>6–8 歲</b></td><td>1–3 年級</td><td>$500</td><td>20 × 乾淨世界兒童頻道（1年）</td></tr>
-      <tr><td><b>9–11 歲</b></td><td>4–6 年級</td><td>$500</td><td>20 × 乾淨世界兒童頻道（1年）</td></tr>
-      <tr><td><b>12–14 歲</b></td><td>7–9 年級</td><td>$500</td><td>20 × 乾淨世界兒童頻道（1年）</td></tr>
-      <tr><td><b>15–18 歲</b></td><td>10–12 年級</td><td>$500</td><td>20 × 乾淨世界兒童頻道（1年）</td></tr>
-    </tbody></table></div>
-    <div class="pchoice">
-      <div class="pchoice-l"><span class="pchoice-tag">人氣獎</span><div class="pchoice-txt"><h4>觀眾票選獎</h4><p>不分年齡，繪畫或影片皆可。頒給在 <strong>#BeKindBeCool</strong> 標籤上獲得最多讚與分享的作品。</p></div></div>
-      <div class="pchoice-amt">$500</div>
-    </div>
+  <div class="prizecards">
+    <div class="prizecard"><div class="pc-val">$500</div><div class="pc-title">首獎</div><div class="pc-sub">四個年齡組各一名</div></div>
+    <div class="prizecard"><div class="pc-val">80</div><div class="pc-title">乾淨世界兒童頻道會員</div><div class="pc-sub">每組 20 名 · 各一年</div></div>
+    <div class="prizecard hl"><span class="pc-tag">人氣獎</span><div class="pc-val">$500</div><div class="pc-title">觀眾票選獎</div><div class="pc-sub">最多讚 + 分享 · 不分年齡，繪畫或影片</div></div>
+  </div>
+  <div class="agebands"><span class="ageband"><b>6–8 歲</b> · 1–3 年級</span><span class="ageband"><b>9–11 歲</b> · 4–6 年級</span><span class="ageband"><b>12–14 歲</b> · 7–9 年級</span><span class="ageband"><b>15–18 歲</b> · 10–12 年級</span></div>
   <p class="prizenote">每位學生在自己的年齡組中競賽。善良影片參加公開大獎（依創意與吸引力評分）。</p>
   <div class="center" style="margin-top:38px"><h3 class="subhead">每位參賽者都獲得肯定</h3></div>
   <div class="pbens">
@@ -1064,6 +1058,17 @@ wireRoll('eroll','ePrev','eNext');
 .gjk-lead{text-align:center;max-width:740px;margin:36px auto 14px;color:var(--ink);font-size:1rem;line-height:1.5;font-weight:600}
 .gjk-banner{display:block;margin:0 auto}
 .gjk-banner img{width:100%;height:auto;border:1px solid var(--line);border-radius:16px;display:block;box-shadow:0 8px 24px rgba(20,20,25,.08)}
+.prizecards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+@media(max-width:760px){.prizecards{grid-template-columns:1fr}}
+.prizecard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;box-shadow:0 8px 24px rgba(20,20,25,.06);text-align:center;display:flex;flex-direction:column;align-items:center}
+.prizecard.hl{background:#eef4ff;border-color:#d9e6fb}
+.pc-tag{display:inline-block;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);background:#fff;border:1px solid #d9e6fb;border-radius:999px;padding:5px 11px;margin-bottom:12px}
+.pc-val{font-size:2.7rem;font-weight:900;color:var(--blue);letter-spacing:-.03em;line-height:1}
+.pc-title{font-size:1.06rem;font-weight:800;color:var(--ink);margin-top:9px}
+.pc-sub{font-size:.86rem;color:var(--slate);line-height:1.45;margin-top:5px;max-width:26ch}
+.agebands{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:20px}
+.ageband{font-size:.82rem;font-weight:700;color:var(--slate);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px}
+.ageband b{color:var(--ink);font-weight:800}
 </style>
 </body>
 </html>
